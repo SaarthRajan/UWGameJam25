@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlpc3yn04tmhp"]
+[gd_scene load_steps=13 format=3 uid="uid://dlpc3yn04tmhp"]
 
+[ext_resource type="Script" uid="uid://dnwieeiymjso0" path="res://scripts/player_hallway.gd" id="1_h81ti"]
 [ext_resource type="Texture2D" uid="uid://dstli62uen835" path="res://assets/textures/white_bricks.jpg" id="1_owcqv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_owcqv"]
@@ -43,15 +44,16 @@ size = Vector3(500, 200, 5)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_u7i40")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -232.69357, 2.3826141, 0)
+script = ExtResource("1_h81ti")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45.352657, 0)
 shape = SubResource("CapsuleShape3D_u0cnw")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+[node name="Camera3D" type="Camera3D" parent="player"]
 transform = Transform3D(-0.007924339, 0.18491197, -0.9827231, 0.0014910176, 0.98275506, 0.18490596, 0.9999675, 0, -0.008063392, 0, 65.34058, 0)
 fov = 55.957275
 
