@@ -24,6 +24,6 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("Move_Down"):
 		velocity.y = SPEED
 	else:
-		velocity.y = 0
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
