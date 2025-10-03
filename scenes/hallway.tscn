@@ -97,3 +97,14 @@ mesh = SubResource("BoxMesh_u0cnw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4946566, 0)
 shape = SubResource("BoxShape3D_owcqv")
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.013246629, -0.9999124, 0, 0.9999124, -0.013246629, 0, 0, 0, 1, -248.06592, 199.13618, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4222784, 0)
+mesh = SubResource("BoxMesh_u0cnw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4946566, 0)
+shape = SubResource("BoxShape3D_owcqv")
