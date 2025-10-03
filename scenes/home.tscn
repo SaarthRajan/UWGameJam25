@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://duf27xr5u8yxg"]
+
+[ext_resource type="Script" uid="uid://dov527rpi4p8d" path="res://scripts/home.gd" id="1_krot7"]
+
+[sub_resource type="SystemFont" id="SystemFont_fsr8q"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 500
+
+[sub_resource type="Theme" id="Theme_krot7"]
+default_font = SubResource("SystemFont_fsr8q")
+default_font_size = 72
+
+[sub_resource type="SystemFont" id="SystemFont_krot7"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 500
+
+[sub_resource type="Theme" id="Theme_u4wd2"]
+default_font = SubResource("SystemFont_krot7")
+default_font_size = 48
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_krot7")
+
+[node name="PlaceholderBackground" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 120.0
+offset_right = 936.0
+offset_bottom = 222.0
+theme = SubResource("Theme_krot7")
+text = "Placeholder Name"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 264.0
+offset_right = 626.0
+offset_bottom = 373.0
+theme = SubResource("Theme_u4wd2")
+theme_override_colors/font_color = Color(0.2763409, 0.6734187, 3.85046e-07, 1)
+text = "Play"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 384.0
+offset_right = 626.0
+offset_bottom = 493.0
+theme = SubResource("Theme_u4wd2")
+theme_override_colors/font_color = Color(0.8039216, 0, 0.08627451, 1)
+text = "Quit"
+flat = true
+
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
