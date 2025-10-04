@@ -18,6 +18,7 @@ tile_set = ExtResource("1_buj6i")
 tile_set = ExtResource("2_txipo")
 
 [node name="Int" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0)
 tile_set = ExtResource("3_buj6i")
 
 [node name="Walls and Windows" type="TileMapLayer" parent="."]
