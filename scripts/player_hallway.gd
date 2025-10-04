@@ -30,3 +30,33 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
+	
+	if $Camera3D/RayCast3D.is_colliding():
+		var collider = $Camera3D/RayCast3D.get_collider()
+		if collider.name == "Door101":
+			$"HUD/TEXT".set_text("""
+			ROOM 101
+			PRESS ENTER TO GO IN
+			""")
+		elif collider.name == "Door102":
+			$"HUD/TEXT".set_text("""
+			ROOM 102
+			PRESS ENTER TO GO IN
+			""")
+		elif collider.name == "Door103":
+			$"HUD/TEXT".set_text("""
+			ROOM 103
+			PRESS ENTER TO GO IN
+			""")
+		elif collider.name == "Door104":
+			$"HUD/TEXT".set_text("""
+			ROOM 104
+			PRESS ENTER TO GO IN
+			""")
+		elif collider.name == "DoorCommons":
+			$"HUD/TEXT".set_text("Commons")
+		else:
+			$"HUD/TEXT".set_text("")
+	else:
+		$"HUD/TEXT".set_text("")
