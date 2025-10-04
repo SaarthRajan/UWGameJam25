@@ -34,13 +34,20 @@ directories/dtl_directory={
 "date_murders/valter": "res://scripts/timelines/date_murders/valter.dtl",
 "hippie": "res://scripts/timelines/breakfast/hippie.dtl",
 "musicNerd": "res://scripts/timelines/breakfast/musicNerd.dtl",
+"ownRoom": "res://scripts/timelines/scene_3/ownRoom.dtl",
+"room102": "res://scripts/timelines/scene_3/room102.dtl",
+"room103": "res://scripts/timelines/scene_3/room103.dtl",
+"room104": "res://scripts/timelines/scene_3/room104.dtl",
 "rowan": "res://scripts/timelines/breakfast/rowan.dtl",
+"scene4": "res://scripts/timelines/scene_3/scene4.dtl",
 "valter": "res://scripts/timelines/breakfast/valter.dtl"
 }
 layout/style_directory={}
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"user": ""
+}
 
 [display]
 

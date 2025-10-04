@@ -1,0 +1,26 @@
+join rowan left
+rowan (main): Hail, [music nerd] ! Come hither, a new resident!
+join musicNerd right
+musicNerd: What? I can’t hear you. Oh hey.
+leave rowan [animation="Slide Out Up"]
+join hippie left
+hippie: Dude can you turn your music down you’re bothering my bugs
+leave musicNerd [animation="Fade Out Down"]
+join valter right
+valter: You sure that's why they're bothered?
+hippie: What are you insinuating?
+[wait time="0.1"]
+[text_input text="I didn’t mean to cause a whole commotion!! I’m " var="user" placeholder="enter name here"]
+- Let’s all be friends and go to the commons!
+join musicNerd center
+musicNerd: ...
+leave musicNerd [animation="Fade Out Down"]
+valter: *staring at hippie* ...
+leave hippie  [animation="Fade Out Down"]
+[wait time="0.5"]
+leave valter  [animation="Fade Out Down"]
+[wait time="0.5"]
+join rowan [animation="Fade In Down"]
+rowan: Good, I shall meet you there.
+- I’ll go put my stuff down and join you guys in 5
+	[end_timeline]
