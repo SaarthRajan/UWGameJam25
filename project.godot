@@ -39,7 +39,7 @@ directories/dtl_directory={
 "room103": "res://scripts/timelines/scene_3/room103.dtl",
 "room104": "res://scripts/timelines/scene_3/room104.dtl",
 "rowan": "res://scripts/timelines/breakfast/rowan.dtl",
-"scene4": "res://scripts/timelines/scene_3/scene4.dtl",
+"scene4": "res://scripts/timelines/scene4.dtl",
 "valter": "res://scripts/timelines/breakfast/valter.dtl"
 }
 layout/style_directory={}
