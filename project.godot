@@ -28,6 +28,10 @@ directories/dch_directory={
 "valter": "res://scripts/characters/valter.dch"
 }
 directories/dtl_directory={
+"date_murders/hippie": "res://scripts/timelines/date_murders/hippie.dtl",
+"date_murders/musicNerd": "res://scripts/timelines/date_murders/musicNerd.dtl",
+"date_murders/rowan": "res://scripts/timelines/date_murders/rowan.dtl",
+"date_murders/valter": "res://scripts/timelines/date_murders/valter.dtl",
 "hippie": "res://scripts/timelines/breakfast/hippie.dtl",
 "musicNerd": "res://scripts/timelines/breakfast/musicNerd.dtl",
 "rowan": "res://scripts/timelines/breakfast/rowan.dtl",
