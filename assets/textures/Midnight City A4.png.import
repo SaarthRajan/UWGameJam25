@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nig0bj3eqpg8"
-path="res://.godot/imported/Midnight City A2.png-bc4246534a57d8103ec75a64409297e9.ctex"
+uid="uid://bf338iuibg7tf"
+path="res://.godot/imported/Midnight City A4.png-443e965e60dd699ecbfcb82d0d4000f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Midnight City A2.png"
-dest_files=["res://.godot/imported/Midnight City A2.png-bc4246534a57d8103ec75a64409297e9.ctex"]
+source_file="res://assets/textures/Midnight City A4.png"
+dest_files=["res://.godot/imported/Midnight City A4.png-443e965e60dd699ecbfcb82d0d4000f9.ctex"]
 
 [params]
 
