@@ -198,6 +198,7 @@ animations = [{
 }]
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_fjijb")
 speed = 900
 
