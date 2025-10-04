@@ -58,7 +58,7 @@ size = Vector3(500, 5, 100)
 environment = SubResource("Environment_u7i40")
 
 [node name="player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -232.69357, 2.3826141, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196.38972, 4.990082, 0)
 script = ExtResource("1_h81ti")
 metadata/_edit_group_ = true
 
@@ -71,6 +71,7 @@ transform = Transform3D(-0.007924339, 0.18491197, -0.9827231, 0.0014910176, 0.98
 fov = 55.957275
 
 [node name="Ground" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4222784, 0)
@@ -129,6 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117.888016, 34.989952, 42.07
 
 [node name="Ceiling" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 136.4381, 0)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4946566, 0)
@@ -137,3 +139,13 @@ shape = SubResource("BoxShape3D_owcqv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.135498, 0)
 mesh = SubResource("BoxMesh_u7i40")
+
+[node name="Light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.31413, 84.41957, 0)
+light_color = Color(3.2570655, 3.2944162, 2.1738977, 1)
+omni_range = 100.0
+
+[node name="Light2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.27385, 84.41957, 0)
+light_color = Color(3.2570655, 3.2944162, 2.1738977, 1)
+omni_range = 100.0
