@@ -1,30 +1,32 @@
 extends CharacterBody2D
 
-# Constants
-const SPEED = 300.0
+@export_range(0, 1000) var speed := 600
 
-# This is the BASE Player script
+@onready var _animation_player = $AnimatedSprite2D
+var input: Vector2
 
-# To Do
-	# Change the sprite and add animation based on the input/flag
-
-func _physics_process(delta):
+func get_input():
+	input.x = Input.get_action_strength("Move_Right") - Input.get_action_strength("Move_Left")
+	input.y = Input.get_action_strength("Move_Down") - Input.get_action_strength("Move_Up")
 	
-	# Using this method for easy sprite animation change based on the location
-	if Input.is_action_pressed("Move_Up"):
-		velocity.y = -SPEED
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	elif Input.is_action_pressed("Move_Down"):
-		velocity.y = SPEED
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	elif Input.is_action_pressed("Move_Left"):
-		velocity.x = -SPEED
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-	elif Input.is_action_pressed("Move_Right"):
-		velocity.x = SPEED
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+	return input.normalized()
+	
+func _physics_process(delta):
+	var playerInput = get_input()
+	if playerInput.is_zero_approx():
+		velocity = Vector2.ZERO 
+		_animation_player.play("idle_forward")
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-
+		velocity = playerInput * speed
+		if playerInput.x > 0:
+			_animation_player.play("walk_sideways")
+			_animation_player.flip_h = false
+		elif playerInput.x < 0:
+			_animation_player.play("walk_sideways")
+			_animation_player.flip_h = true
+		elif playerInput.y > 0:
+			_animation_player.play("walk_forward")
+		else:
+			_animation_player.play("walk_backwards")
+	
 	move_and_slide()
