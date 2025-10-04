@@ -1,0 +1,5 @@
+join hippie center 
+hippie: Not now!
+leave hippie [animation="Zoom Center Out" length="0.1"]
+[wait time="0.3"]
+[end_timeline]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfjjljw6ksv4d"
-path="res://.godot/imported/detective_1.png-b6d8013eb606ce2246966cdaa48453cd.ctex"
+path="res://.godot/imported/detective_1.png-f681baa1883b52ca329270d921c2f339.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc_profiles/detective_1.png"
-dest_files=["res://.godot/imported/detective_1.png-b6d8013eb606ce2246966cdaa48453cd.ctex"]
+source_file="res://assets/npc_profiles/valter/detective_1.png"
+dest_files=["res://.godot/imported/detective_1.png-f681baa1883b52ca329270d921c2f339.ctex"]
 
 [params]
 
