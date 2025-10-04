@@ -79,7 +79,7 @@ target_position = Vector3(50, 0, 0)
 
 [node name="HUD" type="CanvasLayer" parent="player"]
 
-[node name="TEXT" type="RichTextLabel" parent="player/HUD"]
+[node name="ACTION" type="RichTextLabel" parent="player/HUD"]
 offset_left = 320.0
 offset_top = 128.0
 offset_right = 832.0
@@ -95,6 +95,14 @@ theme_override_font_sizes/mono_font_size = 36
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DAY" type="RichTextLabel" parent="player/HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MISSION" type="RichTextLabel" parent="player/HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Ground" type="StaticBody3D" parent="."]
 metadata/_edit_group_ = true
