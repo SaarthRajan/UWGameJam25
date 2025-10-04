@@ -21,9 +21,22 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"hippie": "res://scripts/characters/hippie.dch",
+"musicNerd": "res://scripts/characters/musicNerd.dch",
+"rowan": "res://scripts/characters/rowan.dch",
+"valter": "res://scripts/characters/valter.dch"
+}
+directories/dtl_directory={
+"hippie": "res://scripts/timelines/breakfast/hippie.dtl",
+"musicNerd": "res://scripts/timelines/breakfast/musicNerd.dtl",
+"rowan": "res://scripts/timelines/breakfast/rowan.dtl",
+"valter": "res://scripts/timelines/breakfast/valter.dtl"
+}
 layout/style_directory={}
+layout/style_list=[]
+layout/default_style="Default"
+variables={}
 
 [display]
 
