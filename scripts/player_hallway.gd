@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
 # Constants
-const SPEED = 50.0
+const PACE = 2 # Set to 1 for normal speed
+const SPEED = (50.0) * PACE
 
 # Variables
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -10,12 +11,12 @@ func _physics_process(delta):
 	
 	# Gravity.
 	if not is_on_floor():
-		velocity.y -= gravity * delta
+		velocity.y -= (gravity * delta) * PACE
 	
 	# Rotation
 	var input_dir = Input.get_axis("Move_Left", "Move_Right")
 	if input_dir:
-		rotate_y(delta * -input_dir)
+		rotate_y(PACE * (delta * -input_dir))
 	
 	# Movement
 	var move = Input.get_axis("Move_Down", "Move_Up")
