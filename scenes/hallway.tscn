@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dlpc3yn04tmhp"]
+[gd_scene load_steps=24 format=3 uid="uid://dlpc3yn04tmhp"]
 
 [ext_resource type="Script" uid="uid://dnwieeiymjso0" path="res://scripts/player_hallway.gd" id="1_h81ti"]
 [ext_resource type="Texture2D" uid="uid://dstli62uen835" path="res://assets/textures/white_bricks.jpg" id="1_owcqv"]
@@ -55,6 +55,15 @@ size = Vector3(5, 120, 100)
 [sub_resource type="BoxMesh" id="BoxMesh_u7i40"]
 size = Vector3(500, 5, 100)
 
+[sub_resource type="BoxMesh" id="BoxMesh_txc3n"]
+size = Vector3(5, 100, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjeik"]
+albedo_color = Color(0.019554144, 0.019554138, 0.019554136, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nlnob"]
+size = Vector3(18.03064, 99.33948, 50)
+
 [node name="Hallway" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -79,6 +88,13 @@ target_position = Vector3(50, 0, 0)
 
 [node name="HUD" type="CanvasLayer" parent="player"]
 
+[node name="ActionBackground" type="ColorRect" parent="player/HUD"]
+offset_left = 384.0
+offset_top = 127.0
+offset_right = 896.0
+offset_bottom = 319.0
+color = Color(0.83137256, 0.6509804, 0.19215687, 0.57254905)
+
 [node name="ACTION" type="RichTextLabel" parent="player/HUD"]
 offset_left = 320.0
 offset_top = 128.0
@@ -93,6 +109,8 @@ theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36
 fit_content = true
+scroll_active = false
+autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -192,3 +210,15 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -47.
 
 [node name="Door103" parent="." instance=ExtResource("3_u7i40")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 94.353516, 34.989952, -41.34868)
+
+[node name="DoorCommons" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 241.06528, 43.05406, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DoorCommons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4118347, 0, 0)
+mesh = SubResource("BoxMesh_txc3n")
+surface_material_override/0 = SubResource("StandardMaterial3D_yjeik")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorCommons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3907776, 2.7332153, 0)
+shape = SubResource("BoxShape3D_nlnob")

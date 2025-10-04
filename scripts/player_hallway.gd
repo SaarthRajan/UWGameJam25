@@ -35,28 +35,67 @@ func _physics_process(delta):
 	if $Camera3D/RayCast3D.is_colliding():
 		var collider = $Camera3D/RayCast3D.get_collider()
 		if collider.name == "Door101":
+			
 			$"HUD/ACTION".set_text("""
 			ROOM 101
 			PRESS ENTER TO GO IN
 			""")
+			$HUD/ActionBackground.visible = true
+			
+			if Input.is_action_just_pressed("Action_Button"):
+				print("Door101")
+				
 		elif collider.name == "Door102":
+			
 			$"HUD/ACTION".set_text("""
 			ROOM 102
 			PRESS ENTER TO GO IN
 			""")
+			$HUD/ActionBackground.visible = true
+			
+			if Input.is_action_just_pressed("Action_Button"):
+				print("Door102")
+				
 		elif collider.name == "Door103":
+			
 			$"HUD/ACTION".set_text("""
 			ROOM 103
 			PRESS ENTER TO GO IN
 			""")
+			$HUD/ActionBackground.visible = true
+			
+			if Input.is_action_just_pressed("Action_Button"):
+				print("Door103")
+				
 		elif collider.name == "Door104":
+			
 			$"HUD/ACTION".set_text("""
 			ROOM 104
 			PRESS ENTER TO GO IN
 			""")
+			$HUD/ActionBackground.visible = true
+			
+			if Input.is_action_just_pressed("Action_Button"):
+				print("Door104")
+			
 		elif collider.name == "DoorCommons":
-			$"HUD/ACTION".set_text("Commons")
+			
+			$"HUD/ACTION".set_text("""
+			Commons
+			PRESS ENTER TO GO IN
+			""")
+			$HUD/ActionBackground.visible = true
+			
+			if Input.is_action_just_pressed("Action_Button"):
+				print("DoorCommons")
+			
 		else:
+			
 			$"HUD/ACTION".set_text("")
+			$HUD/ActionBackground.visible = false
+			
 	else:
+		
 		$"HUD/ACTION".set_text("")
+		$HUD/ActionBackground.visible = false
+		
