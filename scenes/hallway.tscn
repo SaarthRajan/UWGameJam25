@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dlpc3yn04tmhp"]
+[gd_scene load_steps=14 format=3 uid="uid://dlpc3yn04tmhp"]
 
 [ext_resource type="Script" uid="uid://dnwieeiymjso0" path="res://scripts/player_hallway.gd" id="1_h81ti"]
 [ext_resource type="Texture2D" uid="uid://dstli62uen835" path="res://assets/textures/white_bricks.jpg" id="1_owcqv"]
+[ext_resource type="PackedScene" uid="uid://jffhc8megao" path="res://scenes/3d_door.tscn" id="3_u7i40"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_owcqv"]
 
@@ -88,23 +89,24 @@ skeleton = NodePath("../../Wall2")
 shape = SubResource("BoxShape3D_h81ti")
 
 [node name="Wall3" type="StaticBody3D" parent="."]
-transform = Transform3D(-0.013246629, -0.9999124, 0, 0.9999124, -0.013246629, 0, 0, 0, 1, 247.94147, 199.13618, 0)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 244.04614, 202.2108, -6.1132507)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4222784, 0)
-mesh = SubResource("BoxMesh_u0cnw")
+mesh = SubResource("BoxMesh_owcqv")
+skeleton = NodePath("../../Wall2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4946566, 0)
-shape = SubResource("BoxShape3D_owcqv")
+shape = SubResource("BoxShape3D_h81ti")
 
 [node name="Wall4" type="StaticBody3D" parent="."]
-transform = Transform3D(-0.013246629, -0.9999124, 0, 0.9999124, -0.013246629, 0, 0, 0, 1, -248.06592, 199.13618, 0)
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -244.1661, 202.2108, -6.1132507)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4222784, 0)
-mesh = SubResource("BoxMesh_u0cnw")
+mesh = SubResource("BoxMesh_owcqv")
+skeleton = NodePath("../../Wall2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4946566, 0)
-shape = SubResource("BoxShape3D_owcqv")
+shape = SubResource("BoxShape3D_h81ti")
+
+[node name="3D Door" parent="." instance=ExtResource("3_u7i40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -117.888016, 34.989952, 42.07028)

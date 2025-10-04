@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://jffhc8megao"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mmd3k"]
+size = Vector3(20, 75, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x2mcg"]
+size = Vector3(20, 75, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd2xq"]
+albedo_color = Color(0.50994927, 0.4712618, 0.45294148, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ghsta"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_yw7m3"]
+size = Vector3(7.5, 4, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54kt0"]
+albedo_color = Color(0.9999997, 0.7595187, 0.384632, 1)
+
+[node name="3D Door" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_mmd3k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_x2mcg")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_qd2xq")
+
+[node name="Knob" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.838665, -2.575666, -1.4164343)
+mesh = SubResource("SphereMesh_ghsta")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.364605, -0.53921413)
+mesh = SubResource("BoxMesh_yw7m3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_54kt0")
