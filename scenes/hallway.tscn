@@ -140,12 +140,12 @@ shape = SubResource("BoxShape3D_owcqv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -40.135498, 0)
 mesh = SubResource("BoxMesh_u7i40")
 
-[node name="Light" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.31413, 84.41957, 0)
+[node name="Light" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.31413, -52.018524, 0)
 light_color = Color(3.2570655, 3.2944162, 2.1738977, 1)
 omni_range = 100.0
 
-[node name="Light2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.27385, 84.41957, 0)
+[node name="Light2" type="OmniLight3D" parent="Ceiling"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.27385, -52.018524, 0)
 light_color = Color(3.2570655, 3.2944162, 2.1738977, 1)
 omni_range = 100.0
