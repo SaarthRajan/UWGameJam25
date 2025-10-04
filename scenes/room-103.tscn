@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=4 uid="uid://x3beasmo1by6"]
+
+[ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_oig0o"]
+[ext_resource type="TileSet" uid="uid://8llobx7vdby6" path="res://assets/tilesets/Int.tres" id="2_45gvf"]
+[ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="3_6jumn"]
+[ext_resource type="TileSet" uid="uid://kqd33wnruq11" path="res://assets/tilesets/Walls-Windows.tres" id="4_c4rco"]
+[ext_resource type="TileSet" uid="uid://butastpkdnimf" path="res://assets/tilesets/Bathroom.tres" id="5_l3xim"]
+[ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="6_ilwjr"]
+[ext_resource type="TileSet" uid="uid://bu7kv0xbq6y0v" path="res://assets/tilesets/TileMapLayer.tres" id="7_i1bey"]
+[ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="8_tsgp6"]
+
+[node name="Room1" type="Node2D"]
+
+[node name="Flooring2" type="TileMapLayer" parent="."]
+position = Vector2(126, 80)
+tile_map_data = PackedByteArray("AAD+/wMAAAAAAAUAAAD//wMAAAABAAUAAAAEAAMAAAACAAUAAAAAAAMAAAABAAUAAAABAAMAAAABAAUAAAACAAMAAAABAAUAAAADAAMAAAABAAUAAAD+/wQAAAAAAAYAAAD+/wUAAAAAAAYAAAD+/wYAAAAAAAYAAAD+/wcAAAAAAAYAAAD+/wgAAAAAAAcAAAD//wgAAAABAAcAAAAAAAgAAAABAAcAAAABAAgAAAABAAcAAAACAAgAAAABAAcAAAADAAgAAAABAAcAAAAEAAgAAAACAAcAAAAEAAcAAAACAAYAAAAEAAYAAAACAAYAAAAEAAUAAAACAAYAAAAEAAQAAAACAAYAAAA=")
+tile_set = ExtResource("3_6jumn")
+
+[node name="Ext" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_oig0o")
+
+[node name="Int" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_45gvf")
+
+[node name="Flooring" type="TileMapLayer" parent="."]
+position = Vector2(94, 74)
+tile_map_data = PackedByteArray("AAD//wUAAAACAA0AAAD//wYAAAACAA0AAAD//wcAAAACAA0AAAD//wgAAAACAA0AAAAAAAUAAAACAA0AAAAAAAYAAAACAA0AAAAAAAcAAAACAA0AAAAAAAgAAAACAA0AAAABAAUAAAACAA0AAAABAAYAAAACAA0AAAABAAcAAAACAA0AAAABAAgAAAACAA0AAAACAAUAAAACAA0AAAACAAYAAAACAA0AAAACAAcAAAACAA0AAAACAAgAAAACAA0AAAADAAUAAAACAA0AAAADAAYAAAACAA0AAAADAAcAAAACAA0AAAADAAgAAAACAA0AAAAEAAcAAAACAA0AAAAEAAgAAAACAA0AAAAEAAYAAAACAA0AAAAEAAUAAAACAA0AAAA=")
+tile_set = ExtResource("3_6jumn")
+
+[node name="Walls and Windows" type="TileMapLayer" parent="."]
+position = Vector2(-2, -3)
+tile_map_data = PackedByteArray("AAABAAUAAAACAAgAAAACAAUAAAACAAgAAAADAAUAAAACAAgAAAAEAAUAAAACAAgAAAAFAAUAAAACAAgAAAAGAAUAAAACAAgAAAABAAYAAAACAAkAAAACAAYAAAACAAkAAAADAAYAAAACAAkAAAAEAAYAAAACAAkAAAAFAAYAAAACAAkAAAAGAAYAAAACAAkAAAA=")
+tile_set = ExtResource("4_c4rco")
+
+[node name="Bathroom" type="TileMapLayer" parent="."]
+tile_set = ExtResource("5_l3xim")
+
+[node name="Shops" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAkAAAAEAAcAAAACAAkAAAAFAAcAAAA=")
+tile_set = ExtResource("6_ilwjr")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("7_i1bey")
+
+[node name="Furniture" type="TileMapLayer" parent="."]
+position = Vector2(41, -97)
+tile_map_data = PackedByteArray("AAADAAgAAQANAAkAAAAEAAgAAQAOAAkAAAAFAAgAAQAPAAkAAAAFAAkAAQAPAAoAAAAEAAkAAQAOAAoAAAADAAkAAQANAAoAAAACAAkAAQAFAAMAAAA=")
+tile_set = ExtResource("8_tsgp6")
+
+[node name="Furniture2" type="TileMapLayer" parent="."]
+position = Vector2(64, -152)
+tile_map_data = PackedByteArray("AAAEAAkAAQABAAwAAAADAAkAAQABAA0AAAABAAkAAQACAAwAAAABAAoAAQACAA0AAAA=")
+tile_set = ExtResource("8_tsgp6")
+
+[node name="Furniture3" type="TileMapLayer" parent="."]
+position = Vector2(49, -149)
+tile_map_data = PackedByteArray("AAAEAAkAAQABAAwAAAADAAkAAQABAA0AAAAAAAkAAQAEAAkAAAAAAAoAAQAEAAoAAAA=")
+tile_set = ExtResource("8_tsgp6")
