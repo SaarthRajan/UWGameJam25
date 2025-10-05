@@ -18,48 +18,25 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://global.gd"
 
 [dialogic]
 
-<<<<<<< Updated upstream
-directories/dch_directory={}
-directories/dtl_directory={}
-=======
 directories/dch_directory={
 "hippie": "res://scripts/characters/hippie.dch",
 "musicNerd": "res://scripts/characters/musicNerd.dch",
 "rowan": "res://scripts/characters/rowan.dch",
 "valter": "res://scripts/characters/valter.dch"
 }
-directories/dtl_directory={
-"askDate": "res://scripts/timelines/date_murders/askDate.dtl",
-"breakfast/hippie": "res://scripts/timelines/breakfast/hippie.dtl",
-"breakfast/musicNerd": "res://scripts/timelines/breakfast/musicNerd.dtl",
-"breakfast/rowan": "res://scripts/timelines/breakfast/rowan.dtl",
-"breakfast/valter": "res://scripts/timelines/breakfast/valter.dtl",
-"date_murders/hippie": "res://scripts/timelines/date_murders/hippie.dtl",
-"hippie": "res://scripts/timelines/hallway_day2/hippie.dtl",
-"hippie_revisit": "res://scripts/timelines/hallway_day2/hippie_revisit.dtl",
-"musicNerd": "res://scripts/timelines/date_murders/musicNerd.dtl",
-"room100_scene3": "res://scripts/timelines/scene_3/room100_scene3.dtl",
-"room101_scene3": "res://scripts/timelines/scene_3/room101_scene3.dtl",
-"room102_scene3": "res://scripts/timelines/scene_3/room102_scene3.dtl",
-"room103_scene3": "res://scripts/timelines/scene_3/room103_scene3.dtl",
-"room104_scene3": "res://scripts/timelines/scene_3/room104_scene3.dtl",
-"rowan": "res://scripts/timelines/date_murders/rowan.dtl",
-"rowan_MN": "res://scripts/timelines/hallway_day2/rowan_MN.dtl",
-"rowan_MN_revisit": "res://scripts/timelines/hallway_day2/rowan_MN_revisit.dtl",
-"scene10": "res://scripts/timelines/scene10.dtl",
-"scene4": "res://scripts/timelines/scene4.dtl",
-"scene5": "res://scripts/timelines/scene5.dtl",
-"scene7": "res://scripts/timelines/scene7.dtl",
-"timeline": "res://scripts/timelines/timeline.dtl",
-"valter": "res://scripts/timelines/date_murders/valter.dtl",
-"valter_first": "res://scripts/timelines/hallway_day2/valter_first.dtl",
-"valter_revisit": "res://scripts/timelines/hallway_day2/valter_revisit.dtl"
-}
->>>>>>> Stashed changes
+directories/dtl_directory={}
 layout/style_directory={}
+layout/style_list=[]
+layout/default_style="Default"
+variables={
+"user": ""
+}
+glossary/default_case_sensitive=true
+<<<<<<<Updatedupstreamdirectories/dch_directory={}
 
 [display]
 
@@ -114,3 +91,4 @@ Action_Button={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.12591091, 0.12591082, 0.12591082, 1)
