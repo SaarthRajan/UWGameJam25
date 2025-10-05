@@ -1,3 +1,4 @@
+[signal arg="freeze"]
 On the phone with your parent...
 [wait time="1.0"]
 - I had a blast. Everyone is great
@@ -20,4 +21,5 @@ parent: “That’s great, did you make a new friend?”
 [wait time="1.2"]
 - They’re nice people! I’ll talk to them again tomorrow. Goodnight.
 parent: goodnight!
+[signal arg="unfreeze"]
 [end_timeline]

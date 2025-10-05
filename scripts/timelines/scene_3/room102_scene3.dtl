@@ -1,3 +1,4 @@
+[signal arg="freeze"]
 join rowan left
 rowan (main): Hail, music nerd! Come hither, a new resident!
 join musicNerd right
@@ -26,4 +27,5 @@ rowan: Thou mustn't pay them any mind. I shalt meet thou there.
 rowan: T's the room at the endeth of the hall.
 set 
 - I’ll go put my stuff down and join you guys in 5
+	[signal arg="unfreeze"]
 	[end_timeline]
