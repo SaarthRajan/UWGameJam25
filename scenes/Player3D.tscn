@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0j7pr4pbdlqe"]
+[gd_scene load_steps=6 format=3 uid="uid://cmfomstyqngc5"]
 
 [ext_resource type="Script" uid="uid://dnwieeiymjso0" path="res://scripts/player_hallway.gd" id="1_3rakk"]
 [ext_resource type="FontFile" uid="uid://vrrmdx83skor" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf" id="2_kcfhr"]
