@@ -1,0 +1,6 @@
+- knock
+	join rowan center [animation="Slide From Left" length="2.0"]
+	rowan: O, thou art returned. What dost thou require?
+	[wait time="0.3"]
+	- Oh nevermind. Sorry
+[end_timeline]

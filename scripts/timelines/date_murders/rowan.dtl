@@ -1,6 +1,19 @@
 join rowan center
 rowan: Ah [user name]! Thou have graced this rooftop with thy presence. Come, let us behold the nights sky.
+[wait time="1.0"]
 - Wow, this view is nice! You’re so romantic, I love it …
 rowan (killer): A fine view to end your days
 # something here to show stabbing/dead now yk
+[wait time="1.0"]
+join rowan (dagger) leftmost
+[wait time="0.5"]
+- Huh?
+leave rowan
+# [animation="Slide To Right" length="2.2" wait="true"]
+[wait time="1.0"]
+join rowan (stabbed) left
+# left [animation="Slide From Left"  length="3.0" wait="false"]
+leave rowan [animation="Slide To Right"]
+[wait time="5.0"]
 [end_timeline]
+# #

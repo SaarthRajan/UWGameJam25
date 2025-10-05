@@ -1,0 +1,19 @@
+- knock
+	join hippie center [animation="Slide From Left" length="2.0"]
+hippie: Please knock more softly next time. You will scare the bugs.
+- Why do you keep bugs?
+hippie: They have a lot of uses. They can do things humans cannot. They get away with things humans do not hahaha
+- You’re soo funny. How are your bugs?
+	hippie: they’re good. Do you want to meet them?
+	- yes please
+hippie: Come in
+[wait time="1.0"]
+*squuiisshh*
+hippie: OH MY GOSH ANTONIO
+hippie: 😢😢😢😭😭 *crys
+- I am so sorry
+hippie: 🥲 It’s ok. Antonio was my least favorite one.
+leave hippie
+[wait time="3.0"]
+- It was nice talking to you! I’ll see you tomorrow
+[end_timeline]
