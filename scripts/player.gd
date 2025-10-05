@@ -19,10 +19,10 @@ func _physics_process(delta):
 	else:
 		velocity = playerInput * speed
 		if playerInput.x > 0:
-			_animation_player.play("walk_sideways")
+			_animation_player.play("walk_right")
 			_animation_player.flip_h = false
 		elif playerInput.x < 0:
-			_animation_player.play("walk_sideways")
+			_animation_player.play("walk_left")
 			_animation_player.flip_h = true
 		elif playerInput.y > 0:
 			_animation_player.play("walk_forward")

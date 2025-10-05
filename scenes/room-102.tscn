@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cc8go7oeh7nr4"]
+[gd_scene load_steps=12 format=4 uid="uid://cc8go7oeh7nr4"]
 
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_virbi"]
 [ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="2_bv0ey"]
@@ -8,12 +8,17 @@
 [ext_resource type="TileSet" uid="uid://butastpkdnimf" path="res://assets/tilesets/Bathroom.tres" id="6_7str6"]
 [ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="7_sx2vw"]
 [ext_resource type="TileSet" uid="uid://bu7kv0xbq6y0v" path="res://assets/tilesets/TileMapLayer.tres" id="8_b3v1d"]
+[ext_resource type="Texture2D" uid="uid://6uldag838c64" path="res://assets/sprites/characters/F25_Game_Jam_Sprites_with_faces.png" id="9_38xjp"]
+[ext_resource type="Script" uid="uid://tpmobq52dafb" path="res://scripts/door.gd" id="10_rkll3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38xjp"]
+size = Vector2(144, 20)
 
 [node name="Room1" type="Node2D"]
 
 [node name="Flooring2" type="TileMapLayer" parent="."]
 position = Vector2(126, 80)
-tile_map_data = PackedByteArray("AAD+/wMAAAAAAAUAAAD//wMAAAABAAUAAAAAAAMAAAABAAUAAAABAAMAAAABAAUAAAACAAMAAAABAAUAAAADAAMAAAABAAUAAAD+/wQAAAAAAAYAAAD+/wUAAAAAAAYAAAD+/wYAAAAAAAYAAAD+/wcAAAAAAAYAAAD+/wgAAAAAAAcAAAD//wgAAAABAAcAAAAAAAgAAAABAAcAAAABAAgAAAABAAcAAAACAAgAAAABAAcAAAADAAgAAAABAAcAAAAEAAMAAAABAAUAAAAFAAMAAAABAAUAAAAGAAMAAAABAAUAAAAHAAMAAAABAAUAAAAIAAMAAAACAAUAAAAIAAQAAAACAAYAAAAIAAUAAAACAAYAAAAIAAYAAAACAAYAAAAIAAcAAAACAAYAAAAIAAgAAAACAAcAAAAEAAgAAAABAAcAAAAFAAgAAAABAAcAAAAGAAgAAAABAAcAAAAHAAgAAAABAAcAAAA=")
+tile_map_data = PackedByteArray("AAD+/wMAAAAAAAUAAAD//wMAAAABAAUAAAAAAAMAAAABAAUAAAABAAMAAAABAAUAAAACAAMAAAABAAUAAAADAAMAAAABAAUAAAD+/wQAAAAAAAYAAAD+/wUAAAAAAAYAAAD+/wYAAAAAAAYAAAD+/wcAAAAAAAYAAAD+/wgAAAAAAAcAAAD//wgAAAABAAcAAAAAAAgAAAABAAcAAAABAAgAAAABAAcAAAAEAAMAAAABAAUAAAAFAAMAAAABAAUAAAAGAAMAAAABAAUAAAAHAAMAAAABAAUAAAAIAAMAAAACAAUAAAAIAAQAAAACAAYAAAAIAAUAAAACAAYAAAAIAAYAAAACAAYAAAAIAAcAAAACAAYAAAAIAAgAAAACAAcAAAAGAAgAAAABAAcAAAAHAAgAAAABAAcAAAAFAAgAAAABAAcAAAA=")
 tile_set = ExtResource("5_da3dv")
 
 [node name="Ext" type="TileMapLayer" parent="."]
@@ -70,3 +75,30 @@ tile_set = ExtResource("8_b3v1d")
 position = Vector2(72, -56)
 tile_map_data = PackedByteArray("AAAEAAgAAQAEAAwAAAAFAAgAAQAMAA0AAAAGAAgAAQANAA0AAAAHAAgAAQAOAA0AAAAIAAgAAQAPAA0AAAAIAAkAAQADAA4AAAAHAAkAAQACAA4AAAABAAYAAQANAAsAAAACAAYAAQAOAAsAAAADAAYAAQAPAAsAAAADAAcAAQAPAAwAAAAEAAcAAQAEAAsAAAACAAcAAQAOAAwAAAABAAcAAQANAAwAAAA=")
 tile_set = ExtResource("2_bv0ey")
+
+[node name="Purple" type="Sprite2D" parent="."]
+position = Vector2(120, 344)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_38xjp")
+region_enabled = true
+region_rect = Rect2(208.66663, 19.333336, 138, 242)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(464, 352)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_38xjp")
+region_enabled = true
+region_rect = Rect2(33.333344, 21.736862, 121.53519, 239.59642)
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(264, 432)
+
+[node name="Door" type="Area2D" parent="."]
+position = Vector2(0, 8)
+script = ExtResource("10_rkll3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(296, 504)
+shape = SubResource("RectangleShape2D_38xjp")
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]

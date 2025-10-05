@@ -6,8 +6,10 @@
 [ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="5_h1qar"]
 [ext_resource type="TileSet" uid="uid://butastpkdnimf" path="res://assets/tilesets/Bathroom.tres" id="6_s0h5d"]
 [ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="7_dumee"]
-[ext_resource type="PackedScene" uid="uid://efnvwwquhshk" path="res://scenes/player.tscn" id="8_4xt3o"]
-[ext_resource type="TileSet" uid="uid://bu7kv0xbq6y0v" path="res://assets/tilesets/TileMapLayer.tres" id="8_ldfj6"]
+[ext_resource type="Script" uid="uid://tpmobq52dafb" path="res://scripts/door.gd" id="7_p4o86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrnwm"]
+size = Vector2(204.5, 34)
 
 [node name="Cafeteria" type="Node2D"]
 
@@ -50,9 +52,6 @@ tile_set = ExtResource("1_4xt3o")
 tile_map_data = PackedByteArray("AAANAAoAAAAAAA0AAAANAAsAAAAAAA4AAAANAAwAAAAAAA8AAAAOAAoAAAABAA0AAAAOAAsAAAABAA4AAAAOAAwAAAABAA8AAAAPAAoAAAACAA0AAAAPAAsAAAACAA4AAAAPAAwAAAACAA8AAAA=")
 tile_set = ExtResource("7_dumee")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = ExtResource("8_ldfj6")
-
 [node name="Chair2" type="TileMapLayer" parent="."]
 position = Vector2(608, 0)
 tile_map_data = PackedByteArray("AAANAAoAAAAAAA0AAAANAAsAAAAAAA4AAAANAAwAAAAAAA8AAAAOAAoAAAABAA0AAAAOAAsAAAABAA4AAAAOAAwAAAABAA8AAAAPAAoAAAACAA0AAAAPAAsAAAACAA4AAAAPAAwAAAACAA8AAAA=")
@@ -68,10 +67,19 @@ position = Vector2(50, -12)
 tile_map_data = PackedByteArray("AAASAAcAAAAIAAoAAAASAAgAAAAIAAsAAAASAAkAAAAIAAwAAAATAAcAAAAJAAoAAAATAAgAAAAJAAsAAAATAAkAAAAJAAwAAAAKAAQAAAAIAA4AAAAKAAUAAAAIAA8AAAALAAQAAAAJAA4AAAALAAUAAAAJAA8AAAAMAAQAAAAKAA4AAAAMAAUAAAAKAA8AAAANAAQAAAALAA4AAAANAAUAAAALAA8AAAA=")
 tile_set = ExtResource("6_s0h5d")
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("8_4xt3o")]
-position = Vector2(672, 616)
-
 [node name="Table2" type="TileMapLayer" parent="."]
 position = Vector2(792, -80)
 tile_map_data = PackedByteArray("AAD6/wgAAQANAAkAAAD6/wkAAQANAAoAAAD7/wgAAQAOAAkAAAD7/wkAAQAOAAoAAAD8/wgAAQAPAAkAAAD8/wkAAQAPAAoAAAA=")
 tile_set = ExtResource("2_fd8ba")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(680, 470)
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("7_p4o86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(663, 561)
+shape = SubResource("RectangleShape2D_rrnwm")
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]

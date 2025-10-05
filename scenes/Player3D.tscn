@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0j7pr4pbdlqe"]
+
+[ext_resource type="Script" uid="uid://dnwieeiymjso0" path="res://scripts/player_hallway.gd" id="1_3rakk"]
+[ext_resource type="FontFile" uid="uid://vrrmdx83skor" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Regular.ttf" id="2_kcfhr"]
+[ext_resource type="FontFile" uid="uid://cc4xli25271fd" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf" id="3_x04v5"]
+[ext_resource type="FontFile" uid="uid://b5c0p00x6g6u5" path="res://addons/dialogic/Example Assets/Fonts/Roboto-Italic.ttf" id="4_r7h6l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_suvm5"]
+radius = 11.557617
+height = 59.80658
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_3rakk")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45.352657, 0)
+shape = SubResource("CapsuleShape3D_suvm5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.007924339, 0.18491197, -0.9827231, 0.0014910176, 0.98275506, 0.18490596, 0.9999675, 0, -0.008063392, 0, 65.34058, 0)
+fov = 55.957275
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(-0.007924339, 0.0014910175, 0.9999675, 0.18491198, 0.98275506, 0, -0.9827232, 0.18490598, -0.008063392, 0, 0, 0)
+target_position = Vector3(50, 0, 0)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ActionBackground" type="ColorRect" parent="HUD"]
+offset_left = 320.0
+offset_top = 127.0
+offset_right = 832.0
+offset_bottom = 320.0
+color = Color(0.83137256, 0.6509804, 0.19215687, 0.57254905)
+
+[node name="ACTION" type="RichTextLabel" parent="HUD"]
+offset_left = 320.0
+offset_top = 128.0
+offset_right = 832.0
+offset_bottom = 256.0
+theme_override_fonts/normal_font = ExtResource("2_kcfhr")
+theme_override_fonts/bold_font = ExtResource("3_x04v5")
+theme_override_fonts/italics_font = ExtResource("4_r7h6l")
+theme_override_font_sizes/normal_font_size = 36
+theme_override_font_sizes/bold_font_size = 36
+theme_override_font_sizes/bold_italics_font_size = 36
+theme_override_font_sizes/italics_font_size = 36
+theme_override_font_sizes/mono_font_size = 36
+fit_content = true
+scroll_active = false
+tab_size = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DAY" type="RichTextLabel" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MISSION" type="RichTextLabel" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
