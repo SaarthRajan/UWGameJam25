@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4cdb11i6ddee"]
+
+[ext_resource type="Script" uid="uid://cb4mmg6qcdtxe" path="res://scripts/scene_7.gd" id="1_7lf00"]
+[ext_resource type="Texture2D" uid="uid://reoi2gti8f1l" path="res://assets/Phone.png" id="1_gujkn"]
+
+[sub_resource type="Animation" id="Animation_7lf00"]
+resource_name = "text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Text:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nvoyu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/Text:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cfcac"]
+_data = {
+&"RESET": SubResource("Animation_nvoyu"),
+&"text": SubResource("Animation_7lf00")
+}
+
+[node name="Scene 7" type="Node2D"]
+script = ExtResource("1_7lf00")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(269, 354.50522)
+scale = Vector2(0.81937164, 0.82463014)
+texture = ExtResource("1_gujkn")
+
+[node name="Text" type="ColorRect" parent="Sprite2D"]
+visible = false
+offset_left = -151.3355
+offset_top = 517.1952
+offset_right = 64.664505
+offset_bottom = 605.1952
+scale = Vector2(1.2440895, 1)
+color = Color(0.50194114, 0.8353742, 0.12410658, 1)
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D/Text"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 208.0
+offset_bottom = 72.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "Hey, Do you wanna go out with me tonight :3"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="BugGuy" type="Button" parent="."]
+offset_left = 757.0
+offset_top = 424.0
+offset_right = 861.0
+offset_bottom = 466.0
+theme_override_colors/font_color = Color(0.66892904, 0.66866136, 3.85046e-07, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Bug Guy"
+flat = true
+
+[node name="PurpleKnight" type="Button" parent="."]
+offset_left = 728.0
+offset_top = 364.0
+offset_right = 894.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0.66941386, 0.00033672273, 0.66940933, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Purple Knight"
+flat = true
+
+[node name="MusicNerd" type="Button" parent="."]
+offset_left = 733.0
+offset_top = 308.0
+offset_right = 873.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0.24585092, 0.59397966, 0.7684683, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Music Nerd"
+flat = true
+
+[node name="Valter" type="Button" parent="."]
+offset_left = 754.0
+offset_top = 255.0
+offset_right = 831.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(1, 0.44705883, 0.17254902, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Valter"
+flat = true
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 421.0
+offset_top = 110.0
+offset_right = 1134.0
+offset_bottom = 247.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 48
+text = "Who do you wanna ask out?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cfcac")
+}
+
+[connection signal="button_down" from="BugGuy" to="." method="_on_bug_guy_button_down"]
+[connection signal="button_down" from="PurpleKnight" to="." method="_on_purple_knight_button_down"]
+[connection signal="button_down" from="MusicNerd" to="." method="_on_music_nerd_button_down"]
+[connection signal="button_down" from="Valter" to="." method="_on_valter_button_down"]
