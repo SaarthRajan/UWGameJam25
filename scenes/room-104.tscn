@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://3ntx5t8qujun"]
+[gd_scene load_steps=10 format=4 uid="uid://3ntx5t8qujun"]
 
 [ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="1_cgmgs"]
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="2_s0ndb"]
@@ -8,10 +8,7 @@
 [ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="6_simmt"]
 [ext_resource type="TileSet" uid="uid://bu7kv0xbq6y0v" path="res://assets/tilesets/TileMapLayer.tres" id="7_rt0gj"]
 [ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="8_8qciy"]
-[ext_resource type="Script" uid="uid://tpmobq52dafb" path="res://scripts/door.gd" id="9_s0ndb"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgmgs"]
-size = Vector2(144, 20)
+[ext_resource type="PackedScene" uid="uid://b8jmh4t734lif" path="res://scenes/door_to_hallway.tscn" id="9_s0ndb"]
 
 [node name="Room1" type="Node2D"]
 
@@ -88,12 +85,6 @@ tile_set = ExtResource("3_4j3f6")
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(144, 440)
 
-[node name="Door" type="Area2D" parent="."]
-position = Vector2(-104, 40)
-script = ExtResource("9_s0ndb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-position = Vector2(296, 464)
-shape = SubResource("RectangleShape2D_cgmgs")
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[node name="Area2D" parent="." instance=ExtResource("9_s0ndb")]
+position = Vector2(198, 509)
+spawn_point_name = "SpawnPointDoor104"

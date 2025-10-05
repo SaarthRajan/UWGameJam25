@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ewr1dnyqwklq"]
+[gd_scene load_steps=8 format=4 uid="uid://ewr1dnyqwklq"]
 
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_4xt3o"]
 [ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="2_fd8ba"]
@@ -6,10 +6,7 @@
 [ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="5_h1qar"]
 [ext_resource type="TileSet" uid="uid://butastpkdnimf" path="res://assets/tilesets/Bathroom.tres" id="6_s0h5d"]
 [ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="7_dumee"]
-[ext_resource type="Script" uid="uid://tpmobq52dafb" path="res://scripts/door.gd" id="7_p4o86"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrnwm"]
-size = Vector2(204.5, 34)
+[ext_resource type="PackedScene" uid="uid://b8jmh4t734lif" path="res://scenes/door_to_hallway.tscn" id="7_p4o86"]
 
 [node name="Cafeteria" type="Node2D"]
 
@@ -75,11 +72,6 @@ tile_set = ExtResource("2_fd8ba")
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(680, 470)
 
-[node name="Door" type="Area2D" parent="."]
-script = ExtResource("7_p4o86")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-position = Vector2(663, 561)
-shape = SubResource("RectangleShape2D_rrnwm")
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+[node name="Area2D" parent="." instance=ExtResource("7_p4o86")]
+position = Vector2(669, 564)
+spawn_point_name = "SpawnPointCommons"
