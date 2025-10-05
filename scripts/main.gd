@@ -48,6 +48,9 @@ func _on_timeline_ended(timeline_name):
 		print("Branching...")
 	
 func on_player_interact(door_name):
+	if (not current_scene_node) or (not current_scene_node._branches):
+		return
+		
 	if door_name in current_scene_node._branches:
 		var visited = current_scene_node._branches[door_name]
 		if not visited:
