@@ -16,6 +16,7 @@ var scene_num: int = 3 # TODO switch to 1
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 
+var scene_data = {}
 
 func start_dialogue():
 	print(is_dialogue_active)
