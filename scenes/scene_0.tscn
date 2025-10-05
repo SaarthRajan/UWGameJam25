@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8m62dn1vtmwg"]
 
-[ext_resource type="Script" path="res://scripts/scene_0.gd" id="1_3vkrq"]
+[ext_resource type="Script" uid="uid://ceyiw8jsdq5iq" path="res://scripts/scene_0.gd" id="1_3vkrq"]
 [ext_resource type="Texture2D" uid="uid://x0odgd0fny1k" path="res://assets/cutscenestuff/car.png" id="1_p2ku2"]
 [ext_resource type="Texture2D" uid="uid://bdtrvj16opcf8" path="res://assets/cutscenestuff/hallway.png" id="2_yk7fa"]
 [ext_resource type="Texture2D" uid="uid://b5iq0n27bjgcj" path="res://assets/cutscenestuff/mc_wave.png" id="3_tj2k1"]
@@ -361,7 +361,6 @@ _data = {
 }
 
 [node name="Scene0" type="Node2D"]
-visible = false
 script = ExtResource("1_3vkrq")
 
 [node name="ColorRect" type="ColorRect" parent="."]

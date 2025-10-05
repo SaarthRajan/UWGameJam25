@@ -20,4 +20,5 @@ leave valter [animation="Fade Out Down"]
 join hippie right
 hippie: What is the point of this conversation. Let’s go get some food. There’s meat in the fridge.
 [signal arg="unfreeze"]
+set {Global.scene_4_played} = true
 [end_timeline]

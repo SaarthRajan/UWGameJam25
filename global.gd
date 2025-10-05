@@ -13,6 +13,13 @@ var friend: String = ""
 var is_dialogue_active: bool = false
 var scene_num: int = 3 # TODO switch to 1
 
+var scene_4_played = false
+var is_day_2 = false
+
+var hippie_day_2_done = false
+var valter_day_2_done = false
+var rowan_MN_day_2_done = false
+
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 

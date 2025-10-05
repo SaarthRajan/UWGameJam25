@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://x3beasmo1by6"]
+[gd_scene load_steps=11 format=4 uid="uid://x3beasmo1by6"]
 
+[ext_resource type="Script" uid="uid://qbobt5xunnha" path="res://scenes/room_103.gd" id="1_6jumn"]
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_oig0o"]
 [ext_resource type="TileSet" uid="uid://8llobx7vdby6" path="res://assets/tilesets/Int.tres" id="2_45gvf"]
 [ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="3_6jumn"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b8jmh4t734lif" path="res://scenes/door_to_hallway.tscn" id="9_45gvf"]
 
 [node name="Room1" type="Node2D"]
+script = ExtResource("1_6jumn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(204, 334)
