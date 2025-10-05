@@ -7,6 +7,20 @@ func _ready():
 	# Load the first level
 	switch_player("res://scenes/Player3D.tscn")
 	load_area("res://scenes/hallway.tscn", "SpawnPoint")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(str: String):
+	if str == "freeze":
+		if player is CharacterBody2D:
+			player.speed = 0
+		else:
+			player.SPEED = 0
+	elif str == "unfreeze":
+		if player is CharacterBody2D:
+			player.speed = 400
+		else:
+			player.SPEED = 400
+	
 
 # Load a level with a specific spawn pointwd
 func load_area(level_path: String, spawn_name: String):

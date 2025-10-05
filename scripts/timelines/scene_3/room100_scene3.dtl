@@ -1,4 +1,6 @@
+[signal arg="freeze"]
 I should put my stuff down before I go into my room.
 What was the number again?
- Oh yeah, 101.
+Oh yeah, 101.
+[signal arg="unfreeze"]
 [end_timeline]
