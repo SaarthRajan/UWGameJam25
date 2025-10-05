@@ -1,3 +1,4 @@
+audio "res://assets/murder ballad bullshit.mp3"
 join musicNerd (speaker) rightmost
 [wait time="1.0"]
 musicNerd: Hey {user}… I made you a mixtape
