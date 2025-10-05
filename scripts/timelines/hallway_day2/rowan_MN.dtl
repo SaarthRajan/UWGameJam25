@@ -10,7 +10,7 @@ leave rowan
 rowan: I have lost it, woe is me! I know not where it hath gone
 # valter cutscene somehow idk
 [wait time="3.0"]
-- Where's Music nerd?
+- Where's Music Nerd?
 rowan: I know not, they were gone since I woke
 - I’m sure they’ll -
 	join rowan left
@@ -23,7 +23,7 @@ rowan: Yet thou hast never strummed that guitar.
 musicNerd: Yeah just like how you never spar but have a billion swords on your wall. It’s not that serious.
 rowan: ...
 - Hahah you guys are soooooo funny 😊
-	- Hey [music nerd] do you write music?!
+	- Hey Music Nerd do you write music?!
 musicNerd: yes
 - May I see?
 musicNerd: ...

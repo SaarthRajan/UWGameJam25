@@ -1,6 +1,15 @@
-join hippie   center
+join hippie center
 hippie: Hey how are you!
+[wait time="0.3"]
 - Good, good, enjoying the view, how is your night?
-hippie: This is for Antonio!
-# something here to show killing/dead now yk
+hippie: Remember Antonio?
+[wait time="0.3"]
+- Ant-who now? Oh, the bug?
+hippie: He was more human than you ever could be!
+[wait time="0.3"]
+- Huh?
+update hippie (kill)
+[wait time="2.0"]
+update hippie (dead)
+[wait time="3.0"]
 [end_timeline]
