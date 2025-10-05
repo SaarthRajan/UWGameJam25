@@ -141,5 +141,6 @@ func handle_door_100():
 		actionCard("Cafeteria", Global.enter_instruction, true)
 		if Input.is_action_just_pressed("Action_Button"):
 			enter_room("res://scenes/cafeteria.tscn")
+		
 	else:
 		actionCard("Cafeteria (Locked)", "Put bags into your room before accessing.", true)
