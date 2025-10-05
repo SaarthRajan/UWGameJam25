@@ -45,6 +45,7 @@ directories/dtl_directory={
 "rowan_MN_revisit": "res://scripts/timelines/hallway_day2/rowan_MN_revisit.dtl",
 "scene4": "res://scripts/timelines/scene4.dtl",
 "scene5": "res://scripts/timelines/scene5.dtl",
+"scene7": "res://scripts/timelines/scene7.dtl",
 "valter": "res://scripts/timelines/date_murders/valter.dtl",
 "valter_first": "res://scripts/timelines/hallway_day2/valter_first.dtl",
 "valter_revisit": "res://scripts/timelines/hallway_day2/valter_revisit.dtl"
