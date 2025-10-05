@@ -1,6 +1,16 @@
-join valter center
-valter: Hey, I made you a drink
+join valter (valter_kill_1) center
+[wait time="3.0"]
+update valter (main)
+valter: Hey {user}, I made you a drink
+[wait time="0.3"]
 - Oh wow thanks :)
-valter: enjoy...
-# something here to show killing/dead now yk
+valter: It’s you... You’re the one aren’t you!
+[wait time="0.3"]
+- Yeah, I'm the one :3
+valter: I can't let you kill other people.
+[wait time="0.3"]
+- Huh?
+[wait time="2.0"]
+update valter (dead)
+[wait time="3.0"]
 [end_timeline]

@@ -1,5 +1,5 @@
 join rowan center
-rowan: Ah [user name]! Thou have graced this rooftop with thy presence. Come, let us behold the nights sky.
+rowan: Ah {user}! Thou have graced this rooftop with thy presence. Come, let us behold the nights sky.
 [wait time="1.0"]
 - Wow, this view is nice! You’re so romantic, I love it …
 rowan (killer): A fine view to end your days

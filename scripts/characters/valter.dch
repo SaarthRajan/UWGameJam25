@@ -12,14 +12,50 @@
 },
 &"default_portrait": "main",
 &"description": "",
-&"display_name": "valter",
+&"display_name": "Valter",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"dead": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/valter/valter_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"detective_1": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/valter/detective_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"kill": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/valter/valter_kill_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "main": {
 "export_overrides": {
 "image": "\"res://assets/npc_profiles/valter/detective_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"valter_2": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/valter/valter_2.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
