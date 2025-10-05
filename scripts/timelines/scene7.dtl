@@ -1,0 +1,13 @@
+you: As you wake up the next day. You decide to text on of your floormates\:
+[wait time="2.0"]
+- Text: Heyyyy, want to go get breakfast with me? :)
+		<Empty Text Event>
+		- Rowan
+				rowan: Good morrow,  [user name]! To break fast in thy company wouldst please mine heart. I shall meet thee by the commons
+		- Music Nerd
+				musicNerd: Sure, I’m starving, I’ll be by your door in 10.
+		- Hippie
+				hippie: OK!, just need to make sure my bugs eat first. Don’t want them to go hungry again!
+		- Valter
+				valter: (does the thumbs up thing to the text)
+[end_timeline]
