@@ -23,6 +23,11 @@ var rowan_MN_day_2_done = false
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 
+var killed_by_mn = false
+var killed_by_rw = false
+var killed_by_valter = false
+var killed_by_hippie = false
+
 func start_dialogue():
 	print(is_dialogue_active)
 	emit_signal("dialogue_started")

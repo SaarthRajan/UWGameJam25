@@ -20,6 +20,17 @@ func _on_dialogic_signal(str: String):
 			player.speed = 400
 		else:
 			player.SPEED = 100
+	if str == "killed":
+		if Global.killed_by_hippie:
+			Global.play_dialogue("res://scripts/timelines/date_murders/hippie.dtl")
+		if Global.killed_by_mn:
+			Global.play_dialogue("res://scripts/timelines/date_murders/musicNerd.dtl")
+		if Global.killed_by_rw:
+			Global.play_dialogue("res://scripts/timelines/date_murders/rowan.dtl")
+		if Global.killed_by_valter:
+			Global.play_dialogue("res://scripts/timelines/date_murders/valter.dtl")
+	if str == "end":
+		get_tree().change_scene_to_file("res://scenes/end.tscn")
 	
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	

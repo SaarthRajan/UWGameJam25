@@ -29,4 +29,5 @@ update musicNerd (speaker) center
 # bang noise or smthing
 join musicNerd (dead) center [animation="Zoom In" length="0.0"]
 [wait time="3.0"]
+[signal arg="end"]
 [end_timeline]

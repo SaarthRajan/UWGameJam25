@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bunl3bw6rnxdd"]
+
+[ext_resource type="Texture2D" uid="uid://b16fop7useng" path="res://assets/cutscenestuff/t6s_12ec15c3-e8fe-423f-9d2f-724200cce827_2025-10-05_14-30-48.png" id="1_3d26k"]
+[ext_resource type="Script" uid="uid://dldnxaruhfrgc" path="res://scenes/end.gd" id="1_p7m4f"]
+[ext_resource type="Texture2D" uid="uid://dvjq6nkqj0qfu" path="res://assets/cutscenestuff/newspaper_2.png" id="2_p7m4f"]
+
+[node name="End" type="Node2D"]
+script = ExtResource("1_p7m4f")
+
+[node name="T6s12Ec15c3E8Fe423f9d2f724200Cce82720251005143048" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(556.00006, 339)
+scale = Vector2(1.7966666, 1.7359512)
+texture = ExtResource("1_3d26k")
+
+[node name="Newspaper2" type="Sprite2D" parent="."]
+position = Vector2(764.00006, 309.99997)
+scale = Vector2(1.0013087, 0.93324614)
+texture = ExtResource("2_p7m4f")
+
+[node name="Newspaper3" type="Sprite2D" parent="."]
+position = Vector2(269.77017, 296.1646)
+scale = Vector2(0.9464408, 0.9013854)
+texture = ExtResource("2_p7m4f")

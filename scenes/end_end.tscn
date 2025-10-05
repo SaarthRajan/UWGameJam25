@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://y6y0xxrjveh2"]
+
+[ext_resource type="Texture2D" uid="uid://b16fop7useng" path="res://assets/cutscenestuff/t6s_12ec15c3-e8fe-423f-9d2f-724200cce827_2025-10-05_14-30-48.png" id="1_3o3sg"]
+
+[node name="EndEnd" type="Node2D"]
+
+[node name="T6s12Ec15c3E8Fe423f9d2f724200Cce82720251005143048" type="Sprite2D" parent="."]
+position = Vector2(575, 320.5)
+scale = Vector2(1.8766667, 1.7435157)
+texture = ExtResource("1_3o3sg")
