@@ -50,6 +50,7 @@ directories/dtl_directory={
 "scene4": "res://scripts/timelines/scene4.dtl",
 "scene5": "res://scripts/timelines/scene5.dtl",
 "scene7": "res://scripts/timelines/scene7.dtl",
+"timeline": "res://scripts/timelines/timeline.dtl",
 "valter": "res://scripts/timelines/date_murders/valter.dtl",
 "valter_first": "res://scripts/timelines/hallway_day2/valter_first.dtl",
 "valter_revisit": "res://scripts/timelines/hallway_day2/valter_revisit.dtl"

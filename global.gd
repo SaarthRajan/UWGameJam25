@@ -19,9 +19,6 @@ var enter_instruction: String = "PRESS ENTER TO GO IN"
 var starting_scene_node = SceneNode.new("", "", "", null);
 var current_scene_node: SceneNode;
 	
-func _ready() -> void:
-	load_scene_node(starting_scene_node)
-	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func load_scene_node(scene_node: SceneNode):
 	current_scene_node = scene_node
