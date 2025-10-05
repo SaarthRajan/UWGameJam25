@@ -75,14 +75,15 @@ func enter_room(scene_path: String): # TODO note that you mught have to add a da
 									# the following conditionals...
 	#if it's scene 3 and user chose to go to room 102:
 	if scene_path == "res://scenes/room-102.tscn":
-		Global.play_dialogue("res://scripts/timelines/scene_3/room102_scene3.dtl")
-		get_tree().root.get_node("Main").load_area(scene_path, "SpawnPoint")
-		await get_tree().create_timer(6.0).timeout
-		await Global.dialogue_ended
-		Global.is_dialogue_active = false
-		await get_tree().create_timer(3.0).timeout
-		get_tree().root.get_node("Main").load_area(hallway_scene, "SpawnPoint")
-		Global.scene_number += 1 # increments scene for future count
+		if (Global.scene_num == 3):
+			Global.play_dialogue("res://scripts/timelines/scene_3/room102_scene3.dtl")
+			get_tree().root.get_node("Main").load_area(scene_path, "SpawnPoint")
+			await get_tree().create_timer(6.0).timeout
+			await Global.dialogue_ended
+			Global.is_dialogue_active = false
+			await get_tree().create_timer(3.0).timeout
+			get_tree().root.get_node("Main").load_area(hallway_scene, "SpawnPoint")
+			Global.scene_num += 1 # increments scene for future count
 	get_tree().root.get_node("Main").load_area(scene_path, "SpawnPoint")
 
 # ####################### DOOR HANDLERS
