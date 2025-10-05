@@ -21,6 +21,42 @@ func _on_dialogic_signal(str: String):
 		else:
 			player.SPEED = 100
 	
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	
+var previous_scene_node = null
+var starting_scene_node = SceneNode.new("", "", "", null);
+var current_scene_node: SceneNode;
+
+func load_scene_node(scene_node: SceneNode):
+	if scene_node is SceneNode:
+		previous_scene_node = current_scene_node
+		current_scene_node = scene_node
+		get_tree().root.get_node("Main").load_area(scene_node._target_scene, scene_node._spawn_point)
+		Global.play_dialogue(scene_node._tl_path)
+	else:
+		print("handle branching")
+
+func _on_timeline_ended(timeline_name):
+	print("Timeline ended: ", timeline_name)
+	if current_scene_node._next is SceneNode:
+		print("Moving on to: ", current_scene_node._next._target_scene)
+		load_scene_node(current_scene_node._next)
+	elif (current_scene_node._next is String) and (current_scene_node._next == "prev"):
+		print("Went back to: ", previous_scene_node)
+		load_scene_node(previous_scene_node)
+	else:
+		print("Branching...")
+	
+func on_player_interact(door_name):
+	if door_name in current_scene_node._branches:
+		var visited = current_scene_node._branches[door_name]
+		if not visited:
+			current_scene_node._branches[door_name][0] = true # mark current branch as visited
+			load_scene_node(current_scene_node._branches[door_name][1])
+		else:
+			load_scene_node(current_scene_node._branches[door_name][2])
+	else:
+		print("No branch found for this action")
 
 # Load a level with a specific spawn pointwd
 func load_area(level_path: String, spawn_name: String):
