@@ -49,6 +49,8 @@ directories/dtl_directory={
 "scene10": "res://scripts/timelines/scene10.dtl",
 "scene4": "res://scripts/timelines/scene4.dtl",
 "scene5": "res://scripts/timelines/scene5.dtl",
+"scene6_intro": "res://scripts/timelines/hallway_day2/scene6_intro.dtl",
+"scene6_visited": "res://scripts/timelines/hallway_day2/scene6_visited.dtl",
 "scene7": "res://scripts/timelines/scene7.dtl",
 "timeline": "res://scripts/timelines/timeline.dtl",
 "valter": "res://scripts/timelines/date_murders/valter.dtl",

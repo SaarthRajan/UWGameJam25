@@ -16,19 +16,41 @@ var scene_num: int = 3 # TODO switch to 1
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 
+var previous_scene_node = null
 var starting_scene_node = SceneNode.new("", "", "", null);
 var current_scene_node: SceneNode;
 	
 
 func load_scene_node(scene_node: SceneNode):
-	current_scene_node = scene_node
-	get_tree().root.get_node("Main").load_area(scene_node._target_scene, scene_node._spawn_point)
-	play_dialogue(scene_node._tl_path)
+	if scene_node is SceneNode:
+		previous_scene_node = current_scene_node
+		current_scene_node = scene_node
+		get_tree().root.get_node("Main").load_area(scene_node._target_scene, scene_node._spawn_point)
+		play_dialogue(scene_node._tl_path)
+	else:
+		print("handle branching")
 
 func _on_timeline_ended(timeline_name):
 	print("Timeline ended: ", timeline_name)
-	print("Moving on to: ", current_scene_node._next._target_scene)
-	load_scene_node(current_scene_node._next)
+	if current_scene_node._next is SceneNode:
+		print("Moving on to: ", current_scene_node._next._target_scene)
+		load_scene_node(current_scene_node._next)
+	elif (current_scene_node._next is String) and (current_scene_node._next == "prev"):
+		print("Went back to: ", previous_scene_node)
+		load_scene_node(previous_scene_node)
+	else:
+		print("Branching...")
+	
+func on_player_interact(door_name):
+	if door_name in current_scene_node._branches:
+		var visited = current_scene_node._branches[door_name]
+		if not visited:
+			current_scene_node._branches[door_name][0] = true # mark current branch as visited
+			load_scene_node(current_scene_node._branches[door_name][1])
+		else:
+			load_scene_node(current_scene_node._branches[door_name][2])
+	else:
+		print("No branch found for this action")
 
 func start_dialogue():
 	print(is_dialogue_active)

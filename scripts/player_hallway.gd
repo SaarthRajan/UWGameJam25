@@ -92,6 +92,7 @@ func handle_door_101():
 	Global.put_bags_away = true
 	if Input.is_action_just_pressed("Action_Button"):
 			enter_room("res://scenes/room-101.tscn")
+			Global.on_player_interact("room-101")
 
 func handle_door_102():
 	# only has to knock once to gain access forever
@@ -103,6 +104,7 @@ func handle_door_102():
 		actionCard("Room 102 (Enter)", Global.enter_instruction, true)
 		if Input.is_action_just_pressed("Action_Button"):
 			enter_room("res://scenes/room-102.tscn")
+			Global.on_player_interact("room-102")
 
 func handle_door_103():
 	# only has to knock once to gain access forever
@@ -112,6 +114,7 @@ func handle_door_103():
 			knock_door_103()
 	elif Global.scene_num == 3:
 		actionCard("Room 103 (Knock Again)", Global.knock_instruction, true)
+		Global.on_player_interact("room-103")
 		if Input.is_action_just_pressed("Action_Button"):
 			Global.play_dialogue("res://scripts/timelines/scene_3/room103_scene3.dtl")
 			await get_tree().create_timer(6.0).timeout
@@ -127,6 +130,7 @@ func handle_door_104():
 			knock_door_104()
 	elif Global.scene_num == 3:
 		actionCard("Room 104 (Knock Again)", Global.knock_instruction, true)
+		Global.on_player_interact("room-104")
 		if Input.is_action_just_pressed("Action_Button"):
 			Global.play_dialogue("res://scripts/timelines/scene_3/room104_scene3.dtl")
 			await get_tree().create_timer(6.0).timeout
@@ -141,6 +145,6 @@ func handle_door_100():
 		actionCard("Cafeteria", Global.enter_instruction, true)
 		if Input.is_action_just_pressed("Action_Button"):
 			enter_room("res://scenes/cafeteria.tscn")
-		
+			Global.on_player_interact("cafeteria")
 	else:
 		actionCard("Cafeteria (Locked)", "Put bags into your room before accessing.", true)
