@@ -16,8 +16,14 @@ var scene_num: int = 3 # TODO switch to 1
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 
-var starting_scene_node = SceneNode.new();
+var starting_scene_node = SceneNode.new("", "", "");
 	
+func _ready() -> void:
+	load_scene_node(starting_scene_node)
+
+func load_scene_node(scene_node: SceneNode):
+	get_tree().root.get_node("Main").load_area(scene_node., spawn_point_name)
+
 func start_dialogue():
 	print(is_dialogue_active)
 	emit_signal("dialogue_started")
