@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://8j1jpmittcc" path="res://assets/sprites/characters/walkinleft.png" id="4_6e7eb"]
 [ext_resource type="Texture2D" uid="uid://eakvdj7vrvu5" path="res://assets/sprites/characters/walkinright.png" id="5_r18vy"]
 [ext_resource type="Texture2D" uid="uid://wuwh7espiq15" path="res://assets/sprites/characters/facingback.png" id="6_tdusd"]
-[ext_resource type="Script" uid="uid://brs0kud8v4kcj" path="res://scenes/control.gd" id="6_vclis"]
+[ext_resource type="Script" path="res://scenes/control.gd" id="6_vclis"]
 [ext_resource type="Texture2D" uid="uid://ch200tr645a6x" path="res://assets/progress_bar/circle_bk_background.png" id="7_7dhlp"]
 [ext_resource type="Texture2D" uid="uid://dm4f0o8f5r1jn" path="res://assets/progress_bar/circle_overlay_background.png" id="8_o1xny"]
 [ext_resource type="Texture2D" uid="uid://ct470m7e2ck06" path="res://assets/progress_bar/circle_progress_background.png" id="9_0dqto"]
@@ -62,10 +62,6 @@ speed = 400
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_g2els")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 50)
-zoom = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
