@@ -19,7 +19,7 @@ func _on_dialogic_signal(str: String):
 		if player is CharacterBody2D:
 			player.speed = 400
 		else:
-			player.SPEED = 400
+			player.SPEED = 100
 	
 
 # Load a level with a specific spawn pointwd
