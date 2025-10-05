@@ -16,13 +16,22 @@ var scene_num: int = 3 # TODO switch to 1
 var knock_instruction: String = "PRESS ENTER TO KNOCK"
 var enter_instruction: String = "PRESS ENTER TO GO IN"
 
-var starting_scene_node = SceneNode.new("", "", "");
+var starting_scene_node = SceneNode.new("", "", "", null);
+var current_scene_node: SceneNode;
 	
 func _ready() -> void:
 	load_scene_node(starting_scene_node)
+	Dialogic.timeline_ended.connect(_on_timeline_ended)
 
 func load_scene_node(scene_node: SceneNode):
-	get_tree().root.get_node("Main").load_area(scene_node., spawn_point_name)
+	current_scene_node = scene_node
+	get_tree().root.get_node("Main").load_area(scene_node._target_scene, scene_node._spawn_point)
+	play_dialogue(scene_node._tl_path)
+
+func _on_timeline_ended(timeline_name):
+	print("Timeline ended: ", timeline_name)
+	print("Moving on to: ", current_scene_node._next._target_scene)
+	load_scene_node(current_scene_node._next)
 
 func start_dialogue():
 	print(is_dialogue_active)
