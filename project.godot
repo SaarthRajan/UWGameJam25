@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UWGameJam25"
-run/main_scene="uid://duf27xr5u8yxg"
+run/main_scene="uid://dkul7o1hds101"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://assets/icon.svg"
 

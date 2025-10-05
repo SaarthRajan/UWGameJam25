@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bd7y7lrhtcc1w"]
+[gd_scene load_steps=9 format=4 uid="uid://bd7y7lrhtcc1w"]
 
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_buj6i"]
 [ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="2_txipo"]
@@ -18,7 +18,7 @@ tile_set = ExtResource("1_buj6i")
 tile_set = ExtResource("2_txipo")
 
 [node name="Int" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0)
+tile_map_data = PackedByteArray("AAD/////AAAAAAEAAAA=")
 tile_set = ExtResource("3_buj6i")
 
 [node name="Walls and Windows" type="TileMapLayer" parent="."]

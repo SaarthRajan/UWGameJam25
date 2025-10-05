@@ -51,34 +51,34 @@ func _physics_process(delta):
 			actionCard("Room 101", true)
 			
 			if Input.is_action_just_pressed("Action_Button"):
-				print("Door101")
+				get_tree().root.get_node("Main").load_area("res://scenes/room-101.tscn", "SpawnPoint")
 				
 		elif collider.name == "Door102":
 			
 			actionCard("Room 102", true)
 			
 			if Input.is_action_just_pressed("Action_Button"):
-				print("Door102")
+				get_tree().root.get_node("Main").load_area("res://scenes/room-102.tscn", "SpawnPoint")
 				
 		elif collider.name == "Door103":
 			
 			actionCard("Room 103", true)
 			
 			if Input.is_action_just_pressed("Action_Button"):
-				print("Door103")
+				get_tree().root.get_node("Main").load_area("res://scenes/room-103.tscn", "SpawnPoint")
 				
 		elif collider.name == "Door104":
 			
 			actionCard("Room 104", true)
 			
 			if Input.is_action_just_pressed("Action_Button"):
-				print("Door104")
+				get_tree().root.get_node("Main").load_area("res://scenes/room-104.tscn", "SpawnPoint")
 			
 		elif collider.name == "DoorCommons":
-			actionCard("Commons", true)
+			actionCard("Cafeteria", true)
 			
 			if Input.is_action_just_pressed("Action_Button"):
-				print("DoorCommons")
+				get_tree().root.get_node("Main").load_area("res://scenes/cafeteria.tscn", "SpawnPoint")
 			
 		else:
 			actionCard("", false)

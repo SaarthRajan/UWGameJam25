@@ -14,19 +14,8 @@ func get_input():
 func _physics_process(delta):
 	var playerInput = get_input()
 	if playerInput.is_zero_approx():
-		velocity = Vector2.ZERO 
-		_animation_player.play("idle_forward")
+		velocity = Vector2.ZERO
 	else:
 		velocity = playerInput * speed
-		if playerInput.x > 0:
-			_animation_player.play("walk_sideways")
-			_animation_player.flip_h = false
-		elif playerInput.x < 0:
-			_animation_player.play("walk_sideways")
-			_animation_player.flip_h = true
-		elif playerInput.y > 0:
-			_animation_player.play("walk_forward")
-		else:
-			_animation_player.play("walk_backwards")
 	
 	move_and_slide()

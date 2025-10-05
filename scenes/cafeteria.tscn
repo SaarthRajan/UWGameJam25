@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://ewr1dnyqwklq"]
+[gd_scene load_steps=8 format=4 uid="uid://ewr1dnyqwklq"]
 
 [ext_resource type="TileSet" uid="uid://85ptu3kcetet" path="res://assets/tilesets/Ext.tres" id="1_4xt3o"]
 [ext_resource type="TileSet" uid="uid://x27464qsbrd4" path="res://assets/tilesets/Furniture.tres" id="2_fd8ba"]
@@ -6,7 +6,6 @@
 [ext_resource type="TileSet" uid="uid://c6kgnmm1n7dnw" path="res://assets/tilesets/Flooring.tres" id="5_h1qar"]
 [ext_resource type="TileSet" uid="uid://butastpkdnimf" path="res://assets/tilesets/Bathroom.tres" id="6_s0h5d"]
 [ext_resource type="TileSet" uid="uid://c01t5qh2hsyqm" path="res://assets/tilesets/Shops.tres" id="7_dumee"]
-[ext_resource type="PackedScene" uid="uid://efnvwwquhshk" path="res://scenes/player.tscn" id="8_4xt3o"]
 [ext_resource type="TileSet" uid="uid://bu7kv0xbq6y0v" path="res://assets/tilesets/TileMapLayer.tres" id="8_ldfj6"]
 
 [node name="Cafeteria" type="Node2D"]
@@ -67,9 +66,6 @@ tile_set = ExtResource("1_4xt3o")
 position = Vector2(50, -12)
 tile_map_data = PackedByteArray("AAASAAcAAAAIAAoAAAASAAgAAAAIAAsAAAASAAkAAAAIAAwAAAATAAcAAAAJAAoAAAATAAgAAAAJAAsAAAATAAkAAAAJAAwAAAAKAAQAAAAIAA4AAAAKAAUAAAAIAA8AAAALAAQAAAAJAA4AAAALAAUAAAAJAA8AAAAMAAQAAAAKAA4AAAAMAAUAAAAKAA8AAAANAAQAAAALAA4AAAANAAUAAAALAA8AAAA=")
 tile_set = ExtResource("6_s0h5d")
-
-[node name="PlayerCharacter" parent="." instance=ExtResource("8_4xt3o")]
-position = Vector2(672, 616)
 
 [node name="Table2" type="TileMapLayer" parent="."]
 position = Vector2(792, -80)
