@@ -36,7 +36,7 @@ tile_set = ExtResource("4_c4rco")
 tile_set = ExtResource("5_l3xim")
 
 [node name="Shops" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAABAAkAAAAEAAcAAAACAAkAAAAFAAcAAAA=")
+tile_map_data = PackedByteArray("AAABAAkAAAAEAAcAAAACAAkAAAAFAAcAAAACABAAAAAIAA4AAAADABAAAAAJAA4AAAAEABAAAAAKAA4AAAAFABAAAAALAA4AAAACABEAAAAIAA8AAAADABEAAAAJAA8AAAAEABEAAAAKAA8AAAAFABEAAAALAA8AAAA=")
 tile_set = ExtResource("6_ilwjr")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
