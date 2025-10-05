@@ -60,3 +60,10 @@ func can_enter_room_104() -> bool:
 
 func can_enter_cafeteria() -> bool:
 	return put_bags_away
+
+
+# NODES
+# 	scene_room_x x = a for not visited, x = b for visited
+
+# SCENE 3
+var scene3_100_a = SceneNode.new("", "", null)
