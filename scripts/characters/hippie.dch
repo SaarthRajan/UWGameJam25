@@ -12,11 +12,38 @@
 },
 &"default_portrait": "main",
 &"description": "",
-&"display_name": "hippie",
+&"display_name": "Bug Guy",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"dead": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/hippie/bug_kill_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"hippie": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/hippie/hippie.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"kill": {
+"export_overrides": {
+"image": "\"res://assets/npc_profiles/hippie/bug_kill_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "main": {
 "export_overrides": {
 "image": "\"res://assets/npc_profiles/hippie/hippie.png\""

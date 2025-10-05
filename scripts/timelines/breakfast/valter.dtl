@@ -1,8 +1,8 @@
 join valter  center
-valter: This is a good time to talk, over breakfast. 
+valter: {user}. This is a good time to talk, over breakfast. 
 - Talk about what?
-	valter: Do you not know what happened before you came? There was a murder.
+	valter: Do you not know what happened before you came? There was a murder. You can’t be clueless about it.
 - Yes! Breakfast and chit chat! What’s your major?
-	valter: I’m in chem, and I meant to talk to you about what you know. Who you think did it.
-valter: That one guy has swords you know, easily a murder weapon. But it could be anyone.
+	valter: I’m in chem, and I meant to talk to you about what you know. Who you think did it. Who you think did it. (mumbles: and maybe how you did it)
+valter: Purple Knight has swords you know, easily a murder weapon. But it could be anyone. Anyone could take their swords. The one sword has been missing since you were here...
 [end_timeline]

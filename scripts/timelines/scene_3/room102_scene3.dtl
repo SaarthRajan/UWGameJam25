@@ -1,14 +1,17 @@
+[signal arg="freeze"]
 join rowan left
+rowan (main): Greetings, I am Purple Knight. 
 rowan (main): Hail, music nerd! Come hither, a new resident!
 join musicNerd right
-musicNerd: *Walks up to Rowan holding speaker* What? I can’t hear you.
-musicNerd: *Glances at door* Oh. Hey.
+musicNerd (speaker): *Walks up holding speaker* What? I can’t hear you.
+musicNerd (): *Glances at door* Oh. Hey. I'm Music Nerd.
 leave rowan [animation="Slide Out Up" length="0.2"]
 join hippie left
 hippie: *Walks up to the door* Dude can you turn your music down you’re bothering my bugs
+hippie: Oh you're new, I'm Bug Guy
 leave musicNerd [animation="Fade Out Down"]
 join valter right
-valter: *Suddenly also appears* You sure that's why they're bothered?
+valter: *Suddenly also appears* You sure that's why they're bothered? I'm Valter by the way
 hippie: What are you insinuating?
 [wait time="0.1"]
 [text_input text="I didn’t mean to cause a whole commotion!! I’m " var="user" placeholder="enter name here"]
@@ -22,8 +25,9 @@ leave hippie [animation="Fade Out Down"]
 leave valter [animation="Fade Out Down"]
 [wait time="0.5"]
 join rowan center [animation="Fade In Down"]
-rowan: Thou mustn't pay them any mind. I shalt meet thou there.
+rowan: Thou mustn't pay them any mind. I shall meet thou there.
 rowan: T's the room at the endeth of the hall.
 set 
 - I’ll go put my stuff down and join you guys in 5
+	[signal arg="unfreeze"]
 	[end_timeline]

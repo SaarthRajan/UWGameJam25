@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # Constants
 const PACE = 2 # Set to 1 for normal speed
-const SPEED = (50.0) * PACE
+@export var SPEED = (50.0) * PACE
 const hallway_scene: String = "res://scenes/hallway.tscn"
 
 # Variables

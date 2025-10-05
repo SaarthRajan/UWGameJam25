@@ -1,0 +1,447 @@
+[gd_scene load_steps=14 format=3 uid="uid://bjbpyxkmqnu7d"]
+
+[ext_resource type="Script" uid="uid://ceyiw8jsdq5iq" path="res://scripts/scene_0.gd" id="1_3vkrq"]
+[ext_resource type="Texture2D" uid="uid://x0odgd0fny1k" path="res://assets/cutscenestuff/car.png" id="1_p2ku2"]
+[ext_resource type="Texture2D" uid="uid://bdtrvj16opcf8" path="res://assets/cutscenestuff/hallway.png" id="2_yk7fa"]
+[ext_resource type="Texture2D" uid="uid://b5iq0n27bjgcj" path="res://assets/cutscenestuff/mc_wave.png" id="3_tj2k1"]
+[ext_resource type="Texture2D" uid="uid://8mv541xf5ial" path="res://assets/cutscenestuff/police_lines.png" id="4_ggw5e"]
+[ext_resource type="Texture2D" uid="uid://bdc26ob5brm83" path="res://assets/cutscenestuff/newspaper_1.png" id="6_6fn74"]
+[ext_resource type="Texture2D" uid="uid://2e84joujkq0i" path="res://assets/npc_profiles/hippie/hippie.png" id="6_du1ik"]
+[ext_resource type="Texture2D" uid="uid://kxh83tvv0i7b" path="res://assets/npc_profiles/musicNerd/music_1.png" id="7_3vkrq"]
+[ext_resource type="Texture2D" uid="uid://day0b66wut3dh" path="res://assets/npc_profiles/rowan/knight_1.png" id="8_6fn74"]
+[ext_resource type="Texture2D" uid="uid://bfjjljw6ksv4d" path="res://assets/npc_profiles/valter/detective_1.png" id="9_qbakt"]
+
+[sub_resource type="Animation" id="Animation_du1ik"]
+resource_name = "Start"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2508002, 0.2750775, 0.53333336, 0.56666666, 0.8333333, 0.8666667, 1.009056, 1.0333333, 1.5333333, 2.1666667, 8.981036),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Red:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.0663404, 8.981036),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PoliceLines:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.9786818, 8.981036),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hippie:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 7.0333333, 8.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-311.38983, 376.6103), Vector2(-311.38983, 376.6103), Vector2(1408.0002, 376.6103)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MusicNerd:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.4666667, 5.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1448.0002, 343.99997), Vector2(1448.0002, 343.99997), Vector2(-312.00037, 343.99997)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Knight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5.6666665, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576.0001, -248.00012), Vector2(576.0001, -248.00012), Vector2(576.0001, 904.0001)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Detective:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3.499982, 4.5333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(600.0001, 880), Vector2(600.0001, 880), Vector2(616, -240.00012)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Newspaper1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 9.0161705, 9.50378, 9.700093, 9.829801, 9.941979, 10.015596, 12.066667, 12.231646),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-568, -56), Vector2(584, 304), Vector2(584, 304), Vector2(584, 304), Vector2(584, 304), Vector2(584, 304), Vector2(584, 336), Vector2(584, 336), Vector2(-575.9999, 320.00003)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Newspaper1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 9.0161705, 9.020009, 12.03231),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Newspaper1:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(9.0161705, 9.50378, 9.700093, 9.829801, 9.941979, 10.015596, 12.231646),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.12679741, 0.12679741), Vector2(0.8466875, 0.8466875), Vector2(1.4251949, 1.4251949), Vector2(1.4251949, 1.4251949), Vector2(1.583147, 1.583147), Vector2(1.8757751, 1.8757751), Vector2(1.8757751, 1.8757751)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Newspaper1:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(9.0161705, 9.50378, 9.700093, 9.829801, 9.941979, 10.015596, 12.231646),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.9324061, -2.2767365, -3.861784, -5.633162, -6.2879004, -6.2879004]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Car:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 14.048313, 16.031483, 17.055672, 18.003046, 19.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-432, 424), Vector2(-432, 424), Vector2(432, 424), Vector2(432, 424), Vector2(432, 424), Vector2(1500, 424)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MC Wave:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 16.970324, 17.047136, 19.049566, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MC Wave:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 16.98685, 17.046595),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(264.00003, 840), Vector2(264.00003, 840), Vector2(264.00003, 384.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_3vkrq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Red:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PoliceLines:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hippie:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-311.38983, 376.6103)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MusicNerd:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1448.0002, 343.99997)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Knight:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576.0001, -248.00012)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Detective:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(600.0001, 880)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Newspaper1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-568, -56)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Newspaper1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Newspaper1:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.12679741, 0.12679741)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Newspaper1:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Car:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-432, 424)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MC Wave:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MC Wave:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, 384)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3vkrq"]
+_data = {
+&"RESET": SubResource("Animation_3vkrq"),
+&"Start": SubResource("Animation_du1ik")
+}
+
+[node name="Scene0" type="Node2D"]
+script = ExtResource("1_3vkrq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3vkrq")
+}
+
+[node name="Hallway" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(1, 1.0093168)
+texture = ExtResource("2_yk7fa")
+
+[node name="Black" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.8235294)
+
+[node name="Red" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.5764706, 0, 0, 0.5411765)
+
+[node name="Newspaper1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-568, -56)
+scale = Vector2(0.12679741, 0.12679741)
+texture = ExtResource("6_6fn74")
+
+[node name="MC Wave" type="Sprite2D" parent="."]
+position = Vector2(-200, 384)
+scale = Vector2(0.2645244, 0.2645244)
+texture = ExtResource("3_tj2k1")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(-432, 424)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_p2ku2")
+
+[node name="PoliceLines" type="Node2D" parent="."]
+visible = false
+position = Vector2(1151.9999, 655.99994)
+rotation = 3.1381392
+scale = Vector2(1.032473, 1.0213419)
+skew = 0.02133584
+
+[node name="Police Lines2" type="Sprite2D" parent="PoliceLines"]
+position = Vector2(575.99994, 335.99997)
+rotation = -2.659497
+scale = Vector2(1.032473, 1.0213419)
+skew = 0.02133596
+texture = ExtResource("4_ggw5e")
+
+[node name="Police Lines" type="Sprite2D" parent="PoliceLines"]
+position = Vector2(576, 312)
+rotation = -0.50921446
+scale = Vector2(1.0267755, 1)
+texture = ExtResource("4_ggw5e")
+
+[node name="Hippie" type="Sprite2D" parent="."]
+position = Vector2(-311.38983, 376.6103)
+scale = Vector2(0.17328824, 0.17328824)
+texture = ExtResource("6_du1ik")
+
+[node name="MusicNerd" type="Sprite2D" parent="."]
+position = Vector2(1448.0002, 343.99997)
+scale = Vector2(0.17328824, 0.17328824)
+texture = ExtResource("7_3vkrq")
+
+[node name="Knight" type="Sprite2D" parent="."]
+position = Vector2(576.0001, -248.00012)
+scale = Vector2(0.17328824, 0.17328824)
+texture = ExtResource("8_6fn74")
+
+[node name="Detective" type="Sprite2D" parent="."]
+position = Vector2(600.0001, 880)
+scale = Vector2(0.17328824, 0.17328824)
+texture = ExtResource("9_qbakt")

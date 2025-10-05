@@ -1,3 +1,5 @@
+[signal arg="freeze"]
 dead silence...
 no response
+[signal arg="unfreeze"]
 [end_timeline]

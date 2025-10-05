@@ -1,0 +1,88 @@
+- That was a good breakfast. I should plan something for tonight
+you: You decide to ask one of your floormates on a date\:
+[wait time="1.0"]
+- Heyyyy, meet me tonight on the roof :) it’s a date <3
+		- Rowan
+				join rowan center
+				rowan: Ah {user}! Thou have graced this rooftop with thy presence. Come, let us behold the nights sky.
+				[wait time="1.0"]
+				- Wow, this view is nice! You’re so romantic, I love it …
+				rowan (killer): A fine view to end your days
+				# something here to show stabbing/dead now yk
+				[wait time="1.0"]
+				join rowan (dagger) center
+				[wait time="0.5"]
+				- Huh?
+				leave rowan [animation="Slide To Right" length="1.0" wait="true"]
+				[wait time="1.0"]
+				join rowan (stabbed) left
+				# left [animation="Slide From Left"  length="3.0" wait="false"]
+				leave rowan [animation="Slide To Right" length="1.4"]
+				[wait time="3.0"]
+				[end_timeline]
+		- Music Nerd
+				join musicNerd (speaker) rightmost
+				[wait time="1.0"]
+				musicNerd: Hey {user}… I made you a mixtape
+				[wait time="0.3"]
+				- Aww, I'm flattered
+				update musicNerd center
+				musicNerd (speaker): ♪ when I first saw you just two days ago\
+				my poor heart skipped a beat ♪\
+				♪ imagining your mutilated body\
+				wrapped up in a sheet ♪
+				musicNerd (speaker): ♪ you know that you gotta be special\
+				if I'm bringing out my speaker\
+				to play for you on our very first date ♪
+				musicNerd (speaker): ♪ there's almost a romantic poetry\
+				to being serenaded by the thing that's ♪\
+				♪ ultimately going to make you meet your fate
+				musicNerd (speaker): you'll never be alone ♪\
+				I'll crush your skull and bones\
+				♪ don't say I'll bleed you dry\
+				you'll hemorrhage and die ♪ ♪
+				[wait time="0.5"]
+				- That was … unique?
+				musicNerd (main): You don't get it do you
+				update musicNerd (killer) center
+				[wait time="0.1"]
+				- huh?
+				update musicNerd (speaker) center
+				[wait time="0.8"]
+				# bang noise or smthing
+				join musicNerd (dead) center [animation="Zoom In" length="0.0"]
+				[wait time="3.0"]
+				[end_timeline]
+		- Hippie
+				join hippie center
+				hippie: Hey how are you!
+				[wait time="0.3"]
+				- Good, good, enjoying the view, how is your night?
+				hippie: Remember Antonio?
+				[wait time="0.3"]
+				- Ant-who now? Oh, the bug?
+				hippie: He was more human than you ever could be!
+				[wait time="0.3"]
+				- Huh?
+				update hippie (kill)
+				[wait time="2.0"]
+				update hippie (dead)
+				[wait time="3.0"]
+				[end_timeline]
+		- Valter
+				join valter (kill) center
+				[wait time="3.0"]
+				update valter (main)
+				valter: Hey, I made you a drink
+				[wait time="0.3"]
+				- Oh wow thanks :)
+				valter: It’s you... You’re the one aren’t you!
+				[wait time="0.3"]
+				- Yeah, I'm the one :3
+				valter: I can't let you kill other people.
+				[wait time="0.3"]
+				- Huh?
+				[wait time="2.0"]
+				update valter (dead)
+				[wait time="3.0"]
+				[end_timeline]

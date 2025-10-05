@@ -1,6 +1,32 @@
-join musicNerd center
-musicNerd: Hey… I have something special for you tonight
-- What a nice view, Ohh, do you have a song for me?
-musicNerd (killer): Sorry, it’s not music
-# something here to show killing/dead now yk
+join musicNerd (speaker) rightmost
+[wait time="1.0"]
+musicNerd: Hey {user}… I made you a mixtape
+[wait time="0.3"]
+- Aww, I'm flattered
+update musicNerd center
+musicNerd (speaker): ♪ when I first saw you just two days ago\
+my poor heart skipped a beat ♪\
+♪ imagining your mutilated body\
+wrapped up in a sheet ♪
+musicNerd (speaker): ♪ you know that you gotta be special\
+if I'm bringing out my speaker\
+to play for you on our very first date ♪
+musicNerd (speaker): ♪ there's almost a romantic poetry\
+to being serenaded by the thing that's ♪\
+♪ ultimately going to make you meet your fate
+musicNerd (speaker): you'll never be alone ♪\
+I'll crush your skull and bones\
+♪ don't say I'll bleed you dry\
+you'll hemorrhage and die ♪ ♪
+[wait time="0.5"]
+- That was … unique?
+musicNerd (main): You don't get it do you
+update musicNerd (killer) center
+[wait time="0.1"]
+- huh?
+update musicNerd (speaker) center
+[wait time="0.8"]
+# bang noise or smthing
+join musicNerd (dead) center [animation="Zoom In" length="0.0"]
+[wait time="3.0"]
 [end_timeline]
