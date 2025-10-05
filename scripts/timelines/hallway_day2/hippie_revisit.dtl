@@ -1,0 +1,10 @@
+- knock
+	join hippie center [animation="Slide From Left" length="2.0"]
+	hippie: Wasn’t one antonio enough for you?
+	[wait time="0.3"]
+	- ...
+hippie: I’m just kidding. Do you want something?
+	- no haha sorry. I just wanted to say goodnight again.
+hippie: Goodnight!
+	- Goodnight!
+[end_timeline]

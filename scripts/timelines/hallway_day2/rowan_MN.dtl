@@ -1,0 +1,36 @@
+- knock
+	join rowan center [animation="Slide From Left" length="2.0"]
+	- May I come in?
+		rowan: Certainly
+# some thing to show what the room looks like
+leave rowan
+[wait time="5.0"]
+- What happened to the sword that used to be there?
+	join rowan center
+rowan: I have lost it, woe is me! I know not where it hath gone
+# valter cutscene somehow idk
+[wait time="3.0"]
+- Where's Music nerd?
+rowan: I know not, they were gone since I woke
+- I’m sure they’ll -
+	join rowan left
+	join musicNerd right [animation="Slide From Right" length="2.0"]
+[wait time="2.0"]
+- We were just talking about you! Where were you?
+musicNerd: ...
+musicNerd: I was just getting my guitar strung
+rowan: Yet thou hast never strummed that guitar.
+musicNerd: Yeah just like how you never spar but have a billion swords on your wall. It’s not that serious.
+rowan: ...
+- Hahah you guys are soooooo funny 😊
+	- Hey [music nerd] do you write music?!
+musicNerd: yes
+- May I see?
+musicNerd: ...
+rowan: It is merely prattle.
+leave rowan 
+musicNerd: ♩ ♪ ♫ ♬ ♩ ♪ ♫ ♬ ♩ ♪ ♫ ♬
+leave musicNerd 
+[wait time="2"]
+-  I had so much fun with you guys, I’ll see you tomorrow
+	[end_timeline]
