@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8m62dn1vtmwg"]
+[gd_scene load_steps=15 format=3 uid="uid://c8m62dn1vtmwg"]
 
 [ext_resource type="Script" uid="uid://ceyiw8jsdq5iq" path="res://scripts/scene_0.gd" id="1_3vkrq"]
 [ext_resource type="Texture2D" uid="uid://x0odgd0fny1k" path="res://assets/cutscenestuff/car.png" id="1_p2ku2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://kxh83tvv0i7b" path="res://assets/npc_profiles/musicNerd/music_1.png" id="7_3vkrq"]
 [ext_resource type="Texture2D" uid="uid://day0b66wut3dh" path="res://assets/npc_profiles/rowan/knight_1.png" id="8_6fn74"]
 [ext_resource type="Texture2D" uid="uid://bfjjljw6ksv4d" path="res://assets/npc_profiles/valter/detective_1.png" id="9_qbakt"]
+[ext_resource type="AudioStream" uid="uid://drc1uvnuf73lt" path="res://assets/opening sfx track.mp3" id="11_6fn74"]
 
 [sub_resource type="Animation" id="Animation_3vkrq"]
 length = 0.001
@@ -445,3 +446,8 @@ texture = ExtResource("8_6fn74")
 position = Vector2(600.0001, 880)
 scale = Vector2(0.17328824, 0.17328824)
 texture = ExtResource("9_qbakt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_6fn74")
+volume_db = 5.934
+autoplay = true
