@@ -8,9 +8,10 @@ musicNerd (): *Glances at door* Oh. Hey. I'm Music Nerd.
 leave rowan [animation="Slide Out Up" length="0.2"]
 join hippie left
 hippie: *Walks up to the door* Dude can you turn your music down you’re bothering my bugs
+hippie: Oh you're new, I'm Bug Guy
 leave musicNerd [animation="Fade Out Down"]
 join valter right
-valter: *Suddenly also appears* You sure that's why they're bothered?
+valter: *Suddenly also appears* You sure that's why they're bothered? I'm Valter by the way
 hippie: What are you insinuating?
 [wait time="0.1"]
 [text_input text="I didn’t mean to cause a whole commotion!! I’m " var="user" placeholder="enter name here"]
