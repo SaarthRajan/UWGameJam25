@@ -12,6 +12,11 @@
 
 [node name="Room1" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(220, 354)
+offset = Vector2(0, 50)
+zoom = Vector2(1.5, 1.5)
+
 [node name="Flooring2" type="TileMapLayer" parent="."]
 position = Vector2(126, 80)
 tile_map_data = PackedByteArray("AAD+/wMAAAAAAAUAAAD//wMAAAABAAUAAAAEAAMAAAACAAUAAAAAAAMAAAABAAUAAAABAAMAAAABAAUAAAACAAMAAAABAAUAAAADAAMAAAABAAUAAAD+/wQAAAAAAAYAAAD+/wUAAAAAAAYAAAD+/wYAAAAAAAYAAAD+/wcAAAAAAAYAAAD+/wgAAAAAAAcAAAD//wgAAAABAAcAAAADAAgAAAABAAcAAAAEAAgAAAACAAcAAAAEAAcAAAACAAYAAAAEAAYAAAACAAYAAAAEAAUAAAACAAYAAAAEAAQAAAACAAYAAAA=")
@@ -37,12 +42,10 @@ tile_set = ExtResource("4_86pie")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(-60, -75)
-tile_map_data = PackedByteArray("AAACAAkAAQAFAAIAAAAFAAsAAQAFAAIAAAADAAsAAQAFAAIAAAA=")
 tile_set = ExtResource("7_rt0gj")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(-64, -53)
-tile_map_data = PackedByteArray("AAAIAAkAAQAFAAIAAAA=")
 tile_set = ExtResource("7_rt0gj")
 
 [node name="Bathroom" type="TileMapLayer" parent="."]
@@ -51,12 +54,10 @@ tile_map_data = PackedByteArray("AAAHAAYAAAAHAA0AAAAHAAcAAAAHAA4AAAAHAAgAAAAHAA8
 tile_set = ExtResource("5_0ohj2")
 
 [node name="Shops" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACAA4AAAAIAAwAAAACAA8AAAAIAA0AAAADAA4AAAAJAAwAAAADAA8AAAAJAA0AAAAEAA4AAAAKAAwAAAAEAA8AAAAKAA0AAAAFAA4AAAALAAwAAAAFAA8AAAALAA0AAAAGAA0AAAAEAAgAAAAGAA4AAAAEAAkAAAAHAA0AAAAFAAgAAAAHAA4AAAAFAAkAAAAJAA0AAAAMAA0AAAAJAA4AAAAMAA4AAAAKAA0AAAANAA0AAAAKAA4AAAANAA4AAAALAA0AAAAOAA0AAAALAA4AAAAOAA4AAAAMAA0AAAAPAA0AAAAMAA4AAAAPAA4AAAA=")
 tile_set = ExtResource("6_simmt")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-43, -51)
-tile_map_data = PackedByteArray("AAAFAAkAAQAEAAIAAAA=")
 tile_set = ExtResource("7_rt0gj")
 
 [node name="Furniture" type="TileMapLayer" parent="."]
