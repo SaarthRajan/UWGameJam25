@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8jmh4t734lif"]
+
+[ext_resource type="Script" uid="uid://tpmobq52dafb" path="res://scripts/door.gd" id="1_d3stx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot3j7"]
+size = Vector2(144, 20)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m552d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b27qv"]
+size = Vector2(144, 10)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_d3stx")
+target_scene = "res://scenes/hallway.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ot3j7")
+
+[node name="Blockage" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_m552d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockage"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_b27qv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
